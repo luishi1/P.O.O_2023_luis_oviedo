@@ -1,0 +1,8 @@
+C:\Users\Alumno\Desktop\poo\P.O.O_2023\app3\app3\bin\Debug\app3.exe.config
+C:\Users\Alumno\Desktop\poo\P.O.O_2023\app3\app3\bin\Debug\app3.exe
+C:\Users\Alumno\Desktop\poo\P.O.O_2023\app3\app3\bin\Debug\app3.pdb
+C:\Users\Alumno\Desktop\poo\P.O.O_2023\app3\app3\obj\Debug\app3.csproj.AssemblyReference.cache
+C:\Users\Alumno\Desktop\poo\P.O.O_2023\app3\app3\obj\Debug\app3.csproj.SuggestedBindingRedirects.cache
+C:\Users\Alumno\Desktop\poo\P.O.O_2023\app3\app3\obj\Debug\app3.csproj.CoreCompileInputs.cache
+C:\Users\Alumno\Desktop\poo\P.O.O_2023\app3\app3\obj\Debug\app3.exe
+C:\Users\Alumno\Desktop\poo\P.O.O_2023\app3\app3\obj\Debug\app3.pdb
