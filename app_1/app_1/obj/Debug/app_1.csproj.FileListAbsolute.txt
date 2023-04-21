@@ -1,0 +1,8 @@
+C:\Users\Alejandro oviedo\Desktop\poo\P.O.O_2023\app_1\app_1\bin\Debug\app_1.exe.config
+C:\Users\Alejandro oviedo\Desktop\poo\P.O.O_2023\app_1\app_1\bin\Debug\app_1.exe
+C:\Users\Alejandro oviedo\Desktop\poo\P.O.O_2023\app_1\app_1\bin\Debug\app_1.pdb
+C:\Users\Alejandro oviedo\Desktop\poo\P.O.O_2023\app_1\app_1\obj\Debug\app_1.csproj.AssemblyReference.cache
+C:\Users\Alejandro oviedo\Desktop\poo\P.O.O_2023\app_1\app_1\obj\Debug\app_1.csproj.SuggestedBindingRedirects.cache
+C:\Users\Alejandro oviedo\Desktop\poo\P.O.O_2023\app_1\app_1\obj\Debug\app_1.csproj.CoreCompileInputs.cache
+C:\Users\Alejandro oviedo\Desktop\poo\P.O.O_2023\app_1\app_1\obj\Debug\app_1.exe
+C:\Users\Alejandro oviedo\Desktop\poo\P.O.O_2023\app_1\app_1\obj\Debug\app_1.pdb
