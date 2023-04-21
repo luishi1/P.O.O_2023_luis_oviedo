@@ -1,71 +1,56 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace app_1
 {
     class numero
     {
-        public float num;
+        public int num;
         
-        public numero(float num)
+        public numero(int num)
         {
             this.num = num;
         }
 
         public void promedio(List<numero> list)
         {
-            float total = 0;
-            float cantidad = list.Count;
-            for (int i = 0; i < cantidad; i++)
+            int total = 0;
+            float promedio;
+            foreach (numero n in list)
             {
-                total = total + list[i].num;
+                total = total + n.num;
             }
-            float promedio = total / cantidad;
-            Console.WriteLine("Cantidad de datos ingresados :" , cantidad);
-            Console.WriteLine("Suma de los numeros en total es :", total);
-            Console.WriteLine("El promedio es :", promedio);
-
+            promedio = total / list.Count;
+            Console.WriteLine("La suma total de todos los numeros es : " + total);
+            Console.WriteLine("El promedio es: "+ promedio);
         }
     }
     internal class Program
     {
         static void Main(string[] args)
         {
-            numero numeral = new numero(2);
-            float num;
-            int opcion;
+            numero numero1 = new numero(1);
+            int cant = 0;
+            int num;
             List<numero> list = new List<numero>();
-            while (true)
-            {
 
-                Console.WriteLine("ELIJA LA OPCION (por favor valores validos)");
-                Console.WriteLine("1.Ingresar numero");
-                Console.WriteLine("2.Calcular promedio");
-                opcion = int.Parse(Console.ReadLine());
-                if (opcion == 1)
-                {
-                    Console.Clear();
-                    Console.WriteLine("Ingresa un numero");
-                    num = float.Parse(Console.ReadLine());
-                    list.Add(new numero(num));
-                    Console.ReadKey();
-                }
-                if (opcion == 2)
-                {
-                    Console.Clear();
-                    Console.WriteLine("Datos ingresados");
-                    numeral.promedio(list);
-                    Console.ReadKey();
-
-                }
-
-
-
-            }
+            Console.WriteLine("Ingrese cuantos numeros decide ingresar");
+            cant = int.Parse(Console.ReadLine());
+            Console.WriteLine();
+            for (int i = 0; i < cant; i++) { 
             
+                Console.WriteLine("Ingrese un numero");
+                num = int.Parse(Console.ReadLine());
+                list.Add(new numero(num));
+                Console.WriteLine("Numero ingresado correctamente");
+                Console.WriteLine();
+            }
+            Console.WriteLine();
+            Console.WriteLine("Datos ingresados");
+            Console.WriteLine("cantidad de numeros: "+cant);
+            numero1.promedio(list);
+            
+
         }
     }
 }

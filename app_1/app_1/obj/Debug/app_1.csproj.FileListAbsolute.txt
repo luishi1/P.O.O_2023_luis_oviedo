@@ -6,3 +6,11 @@ C:\Users\Alejandro oviedo\Desktop\poo\P.O.O_2023\app_1\app_1\obj\Debug\app_1.csp
 C:\Users\Alejandro oviedo\Desktop\poo\P.O.O_2023\app_1\app_1\obj\Debug\app_1.csproj.CoreCompileInputs.cache
 C:\Users\Alejandro oviedo\Desktop\poo\P.O.O_2023\app_1\app_1\obj\Debug\app_1.exe
 C:\Users\Alejandro oviedo\Desktop\poo\P.O.O_2023\app_1\app_1\obj\Debug\app_1.pdb
+C:\Users\Alumno\Desktop\fiscella\P.O.O_2023\app_1\app_1\bin\Debug\app_1.exe.config
+C:\Users\Alumno\Desktop\fiscella\P.O.O_2023\app_1\app_1\bin\Debug\app_1.exe
+C:\Users\Alumno\Desktop\fiscella\P.O.O_2023\app_1\app_1\bin\Debug\app_1.pdb
+C:\Users\Alumno\Desktop\fiscella\P.O.O_2023\app_1\app_1\obj\Debug\app_1.csproj.AssemblyReference.cache
+C:\Users\Alumno\Desktop\fiscella\P.O.O_2023\app_1\app_1\obj\Debug\app_1.csproj.SuggestedBindingRedirects.cache
+C:\Users\Alumno\Desktop\fiscella\P.O.O_2023\app_1\app_1\obj\Debug\app_1.csproj.CoreCompileInputs.cache
+C:\Users\Alumno\Desktop\fiscella\P.O.O_2023\app_1\app_1\obj\Debug\app_1.exe
+C:\Users\Alumno\Desktop\fiscella\P.O.O_2023\app_1\app_1\obj\Debug\app_1.pdb
