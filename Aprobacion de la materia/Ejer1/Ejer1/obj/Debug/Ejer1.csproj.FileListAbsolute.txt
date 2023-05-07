@@ -1,0 +1,8 @@
+C:\Users\Alejandro oviedo\Desktop\poo\P.O.O_2023\Aprobacion de la materia\Ejer1\Ejer1\bin\Debug\Ejer1.exe.config
+C:\Users\Alejandro oviedo\Desktop\poo\P.O.O_2023\Aprobacion de la materia\Ejer1\Ejer1\bin\Debug\Ejer1.exe
+C:\Users\Alejandro oviedo\Desktop\poo\P.O.O_2023\Aprobacion de la materia\Ejer1\Ejer1\bin\Debug\Ejer1.pdb
+C:\Users\Alejandro oviedo\Desktop\poo\P.O.O_2023\Aprobacion de la materia\Ejer1\Ejer1\obj\Debug\Ejer1.csproj.AssemblyReference.cache
+C:\Users\Alejandro oviedo\Desktop\poo\P.O.O_2023\Aprobacion de la materia\Ejer1\Ejer1\obj\Debug\Ejer1.csproj.SuggestedBindingRedirects.cache
+C:\Users\Alejandro oviedo\Desktop\poo\P.O.O_2023\Aprobacion de la materia\Ejer1\Ejer1\obj\Debug\Ejer1.csproj.CoreCompileInputs.cache
+C:\Users\Alejandro oviedo\Desktop\poo\P.O.O_2023\Aprobacion de la materia\Ejer1\Ejer1\obj\Debug\Ejer1.exe
+C:\Users\Alejandro oviedo\Desktop\poo\P.O.O_2023\Aprobacion de la materia\Ejer1\Ejer1\obj\Debug\Ejer1.pdb
