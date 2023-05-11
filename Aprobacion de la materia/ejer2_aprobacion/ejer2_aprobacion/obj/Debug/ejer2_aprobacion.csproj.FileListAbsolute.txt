@@ -6,3 +6,11 @@ C:\Users\Alejandro oviedo\Desktop\poo\P.O.O_2023\Aprobacion de la materia\ejer2_
 C:\Users\Alejandro oviedo\Desktop\poo\P.O.O_2023\Aprobacion de la materia\ejer2_aprobacion\ejer2_aprobacion\obj\Debug\ejer2_aprobacion.csproj.CoreCompileInputs.cache
 C:\Users\Alejandro oviedo\Desktop\poo\P.O.O_2023\Aprobacion de la materia\ejer2_aprobacion\ejer2_aprobacion\obj\Debug\ejer2_aprobacion.exe
 C:\Users\Alejandro oviedo\Desktop\poo\P.O.O_2023\Aprobacion de la materia\ejer2_aprobacion\ejer2_aprobacion\obj\Debug\ejer2_aprobacion.pdb
+C:\Users\Alumno\Desktop\poo\P.O.O_2023_luis_oviedo\Aprobacion de la materia\ejer2_aprobacion\ejer2_aprobacion\bin\Debug\ejer2_aprobacion.exe.config
+C:\Users\Alumno\Desktop\poo\P.O.O_2023_luis_oviedo\Aprobacion de la materia\ejer2_aprobacion\ejer2_aprobacion\bin\Debug\ejer2_aprobacion.exe
+C:\Users\Alumno\Desktop\poo\P.O.O_2023_luis_oviedo\Aprobacion de la materia\ejer2_aprobacion\ejer2_aprobacion\bin\Debug\ejer2_aprobacion.pdb
+C:\Users\Alumno\Desktop\poo\P.O.O_2023_luis_oviedo\Aprobacion de la materia\ejer2_aprobacion\ejer2_aprobacion\obj\Debug\ejer2_aprobacion.csproj.AssemblyReference.cache
+C:\Users\Alumno\Desktop\poo\P.O.O_2023_luis_oviedo\Aprobacion de la materia\ejer2_aprobacion\ejer2_aprobacion\obj\Debug\ejer2_aprobacion.csproj.SuggestedBindingRedirects.cache
+C:\Users\Alumno\Desktop\poo\P.O.O_2023_luis_oviedo\Aprobacion de la materia\ejer2_aprobacion\ejer2_aprobacion\obj\Debug\ejer2_aprobacion.csproj.CoreCompileInputs.cache
+C:\Users\Alumno\Desktop\poo\P.O.O_2023_luis_oviedo\Aprobacion de la materia\ejer2_aprobacion\ejer2_aprobacion\obj\Debug\ejer2_aprobacion.exe
+C:\Users\Alumno\Desktop\poo\P.O.O_2023_luis_oviedo\Aprobacion de la materia\ejer2_aprobacion\ejer2_aprobacion\obj\Debug\ejer2_aprobacion.pdb
