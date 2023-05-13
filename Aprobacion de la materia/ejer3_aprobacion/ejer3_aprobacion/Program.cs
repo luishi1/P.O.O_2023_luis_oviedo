@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace ejer3_aprobacion
 {
@@ -11,8 +8,9 @@ namespace ejer3_aprobacion
         class password
         {
 
-            public int longitud = 8;
+            public int longitud;
             public string contraseña;
+            public static Random rnd = new Random();
 
             public int Longitud 
             { 
@@ -25,12 +23,15 @@ namespace ejer3_aprobacion
                 get { return contraseña; }
             }
 
-            public password() { }
-
+            public password()
+            {
+                longitud = 8;
+                contraseña = generarpassword(longitud);
+            }
             public password (int longitud)
             {
                 this.longitud = longitud;
-                generarpassword();
+                contraseña = generarpassword(longitud);
             }
 
             public bool esfuerte()
@@ -57,18 +58,16 @@ namespace ejer3_aprobacion
                 return cantmayus > 1 && cantminus > 2 && numeros > 5;
             }
 
-            public void generarpassword()
+            public static string generarpassword(int longitud)
             {
-                string opa = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
-                Random rnd = new Random();
-                char[] passwordARRAY = new char[longitud];
+                string caracteres = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890";
+                char[] contraseña = new char[longitud];
 
-                for (int i = 0; i < longitud; i++)
-                {
-                    passwordARRAY[i] = opa[rnd.Next(opa.Length)];
+                for (int i = 0; i < longitud; i++) { 
+                    contraseña[i] = caracteres[rnd.Next(caracteres.Length)];
                 }
 
-                contraseña = new string(passwordARRAY);
+                return new string(contraseña);
             }
         }
 
