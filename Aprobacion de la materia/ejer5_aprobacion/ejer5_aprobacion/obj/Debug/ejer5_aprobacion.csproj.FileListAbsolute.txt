@@ -1,0 +1,8 @@
+C:\Users\Alejandro oviedo\Desktop\poo\P.O.O_2023\Aprobacion de la materia\ejer5_aprobacion\ejer5_aprobacion\bin\Debug\ejer5_aprobacion.exe.config
+C:\Users\Alejandro oviedo\Desktop\poo\P.O.O_2023\Aprobacion de la materia\ejer5_aprobacion\ejer5_aprobacion\bin\Debug\ejer5_aprobacion.exe
+C:\Users\Alejandro oviedo\Desktop\poo\P.O.O_2023\Aprobacion de la materia\ejer5_aprobacion\ejer5_aprobacion\bin\Debug\ejer5_aprobacion.pdb
+C:\Users\Alejandro oviedo\Desktop\poo\P.O.O_2023\Aprobacion de la materia\ejer5_aprobacion\ejer5_aprobacion\obj\Debug\ejer5_aprobacion.csproj.AssemblyReference.cache
+C:\Users\Alejandro oviedo\Desktop\poo\P.O.O_2023\Aprobacion de la materia\ejer5_aprobacion\ejer5_aprobacion\obj\Debug\ejer5_aprobacion.csproj.SuggestedBindingRedirects.cache
+C:\Users\Alejandro oviedo\Desktop\poo\P.O.O_2023\Aprobacion de la materia\ejer5_aprobacion\ejer5_aprobacion\obj\Debug\ejer5_aprobacion.csproj.CoreCompileInputs.cache
+C:\Users\Alejandro oviedo\Desktop\poo\P.O.O_2023\Aprobacion de la materia\ejer5_aprobacion\ejer5_aprobacion\obj\Debug\ejer5_aprobacion.exe
+C:\Users\Alejandro oviedo\Desktop\poo\P.O.O_2023\Aprobacion de la materia\ejer5_aprobacion\ejer5_aprobacion\obj\Debug\ejer5_aprobacion.pdb
