@@ -1,0 +1,190 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Text.RegularExpressions;
+using System.Threading.Tasks;
+
+namespace prueba_2_bimestre
+{
+    public class Vehiculo
+    {
+        private string marca;
+        private int año;
+
+        public string Marca
+        {
+            get { return marca; }
+            set { marca = value; }
+        }
+        public int Año
+        {
+            get { return año; }
+            set { año = value; }
+        }
+
+        public Vehiculo() { }
+
+        public Vehiculo(string marca, int año)
+        {
+            this.marca = marca;
+            this.año = año;
+        }
+
+        public virtual void Mostrar()
+        {
+            Console.WriteLine("Marca del Vehiculo: " + marca);
+            Console.WriteLine("Año de creacion del Vehiculo " + año);
+           
+        }
+    }
+    public class Automovil : Vehiculo
+    {
+        private string modelo;
+        public string Modelo
+        {
+            get { return modelo; }
+            set { modelo = value; }
+        }
+
+        public Automovil() : base() { }
+
+        public Automovil(string marca, int año, string modelo) : base(marca, año)
+        {
+            this.modelo = modelo;
+        }
+
+        public override void Mostrar()
+        {
+
+            base.Mostrar();
+            Console.WriteLine("Modelo del Vehiculo " + modelo);
+        }
+
+    }
+    public class Camion : Vehiculo
+    {
+        private double capacidaddecarga;
+
+        public double Capacidaddecarga
+        {
+            get { return capacidaddecarga; }
+            set { capacidaddecarga = value; }
+        }
+
+        public Camion() : base() { }
+
+        public Camion(string marca, int año, double capacidad) : base(marca, año)
+        {
+            this.Capacidaddecarga = capacidad;
+        }
+
+        public override void Mostrar()
+        {
+     
+            base.Mostrar(); 
+            Console.WriteLine("Capacidad de carga del vehiculo : " +  capacidaddecarga + " KG");
+        }
+        internal class Program
+        {
+            static void Main(string[] args)
+            {
+                List<Vehiculo> vehiculos = new List<Vehiculo>();
+                
+                vehiculos.Add(new Automovil("Ferrari" , 2022 , "Ultra"));
+                vehiculos.Add(new Automovil("Chevrolet" , 1922 , "Beta"));
+                vehiculos.Add(new Automovil("Nissan" , 2011 , "Super"));
+                vehiculos.Add(new Automovil("Tablet" , 1789 , "Lol"));
+                vehiculos.Add(new Camion("Volsvagen" , 2002 , 56.7));
+                vehiculos.Add(new Camion("Volsvagen", 2002, 19.2));
+                vehiculos.Add(new Camion("Mitsubishi", 2040, 700));
+                vehiculos.Add(new Camion("Fulanitos", 1740, 19.5));
+                vehiculos.Add(new Camion("Fulanitos", 1740, 8));
+                vehiculos.Add(new Camion("Fulanitos", 1740, 1));
+                vehiculos.Add(new Camion("Fulanitos", 1740, 122222222));
+
+                int contador = 1;
+
+                Console.WriteLine("------------------------------------------------------------");
+                Console.WriteLine("DATOS ANTES DE VER LOS VALORES DE LOS CAMIONES");
+                Console.WriteLine("------------------------------------------------------------");
+                Console.WriteLine("");
+                Console.WriteLine("");
+                foreach (Vehiculo v in vehiculos)
+                {
+                    Console.WriteLine("----------Vehiculo N°" + contador + "--------------------------------------");
+                    v.Mostrar();
+                    Console.WriteLine("------------------------------------------------------------");
+                    Console.WriteLine("");
+                    contador++;
+                }
+
+                Console.WriteLine("------------------------------------------------------------");
+                Console.WriteLine("EL CAMION CON MAYOR CAPACIDAD DE CARGA ES");
+                Console.WriteLine("------------------------------------------------------------");
+                Console.WriteLine("");
+
+
+                //crear listas
+                List<Camion> camiones = new List<Camion>();
+                for (int i = 0; i < vehiculos.Count; i++)
+                {
+                    if (vehiculos[i] is Camion)
+                    {
+                        Camion camion = (Camion)vehiculos[i];
+                        camiones.Add(camion);
+                    }
+                }
+
+                double maximo = camiones[0].Capacidaddecarga;
+                double minimo = camiones[0].Capacidaddecarga;
+                Camion camion1 = new Camion();
+                //sacar maximo
+                for (int i = 0; i < camiones.Count; i++)
+                {;
+                    if (maximo < camiones[i].Capacidaddecarga)
+                    {
+                        maximo = camiones[i].Capacidaddecarga;
+                    }
+                }
+                //sacar minimo
+                for (int i = 0; i < camiones.Count; i++)
+                {
+                    if (minimo > camiones[i].Capacidaddecarga)
+                    {
+                        minimo = camiones[i].Capacidaddecarga;
+                        camion1 = camiones[i];
+                    }
+                }
+
+                vehiculos.Remove(camion1);
+
+                foreach (Camion c in camiones)
+                {
+                    if (c.Capacidaddecarga == maximo)
+                    {
+                        Console.WriteLine("Marca del Camion: " + c.Marca);
+                        Console.WriteLine("Año de creacion del Camion " + c.Año);
+                        Console.WriteLine("Capacidad de Carga del Camion " + c.Capacidaddecarga + " KG");
+                    }
+                }
+
+                Console.WriteLine("");
+                Console.WriteLine("------------------------------------------------------------");
+                Console.WriteLine("DATOS DE LOS VEHICULOS POST AVERIGUAR EL CAMION CON MENOR CARGA");
+                Console.WriteLine("------------------------------------------------------------");
+                Console.WriteLine("");
+
+                int contador2 = 1;
+                foreach (Vehiculo v in vehiculos)
+                {
+                    Console.WriteLine("----------Vehiculo N°" + contador2 + "--------------------------------------");
+                    v.Mostrar();
+                    Console.WriteLine("------------------------------------------------------------");
+                    Console.WriteLine("");
+                    contador2++;
+                }
+            }
+        }
+    }
+}
