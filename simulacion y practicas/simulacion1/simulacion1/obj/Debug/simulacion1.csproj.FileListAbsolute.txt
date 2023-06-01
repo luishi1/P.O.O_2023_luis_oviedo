@@ -1,0 +1,8 @@
+C:\Users\Alejandro oviedo\Desktop\practicar para que fiscella no explote\simulacion1\simulacion1\bin\Debug\simulacion1.exe.config
+C:\Users\Alejandro oviedo\Desktop\practicar para que fiscella no explote\simulacion1\simulacion1\bin\Debug\simulacion1.exe
+C:\Users\Alejandro oviedo\Desktop\practicar para que fiscella no explote\simulacion1\simulacion1\bin\Debug\simulacion1.pdb
+C:\Users\Alejandro oviedo\Desktop\practicar para que fiscella no explote\simulacion1\simulacion1\obj\Debug\simulacion1.csproj.AssemblyReference.cache
+C:\Users\Alejandro oviedo\Desktop\practicar para que fiscella no explote\simulacion1\simulacion1\obj\Debug\simulacion1.csproj.SuggestedBindingRedirects.cache
+C:\Users\Alejandro oviedo\Desktop\practicar para que fiscella no explote\simulacion1\simulacion1\obj\Debug\simulacion1.csproj.CoreCompileInputs.cache
+C:\Users\Alejandro oviedo\Desktop\practicar para que fiscella no explote\simulacion1\simulacion1\obj\Debug\simulacion1.exe
+C:\Users\Alejandro oviedo\Desktop\practicar para que fiscella no explote\simulacion1\simulacion1\obj\Debug\simulacion1.pdb

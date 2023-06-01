@@ -1,0 +1,16 @@
+C:\Users\Alejandro oviedo\Desktop\practicar para que fiscella no explote\ejer5\ejer5\bin\Debug\ejer5.exe.config
+C:\Users\Alejandro oviedo\Desktop\practicar para que fiscella no explote\ejer5\ejer5\bin\Debug\ejer5.exe
+C:\Users\Alejandro oviedo\Desktop\practicar para que fiscella no explote\ejer5\ejer5\bin\Debug\ejer5.pdb
+C:\Users\Alejandro oviedo\Desktop\practicar para que fiscella no explote\ejer5\ejer5\obj\Debug\ejer5.csproj.AssemblyReference.cache
+C:\Users\Alejandro oviedo\Desktop\practicar para que fiscella no explote\ejer5\ejer5\obj\Debug\ejer5.csproj.SuggestedBindingRedirects.cache
+C:\Users\Alejandro oviedo\Desktop\practicar para que fiscella no explote\ejer5\ejer5\obj\Debug\ejer5.csproj.CoreCompileInputs.cache
+C:\Users\Alejandro oviedo\Desktop\practicar para que fiscella no explote\ejer5\ejer5\obj\Debug\ejer5.exe
+C:\Users\Alejandro oviedo\Desktop\practicar para que fiscella no explote\ejer5\ejer5\obj\Debug\ejer5.pdb
+C:\Users\Alejandro oviedo\Desktop\poo\P.O.O_2023\simulacion y practicas\ejer5\ejer5\bin\Debug\ejer5.exe.config
+C:\Users\Alejandro oviedo\Desktop\poo\P.O.O_2023\simulacion y practicas\ejer5\ejer5\bin\Debug\ejer5.exe
+C:\Users\Alejandro oviedo\Desktop\poo\P.O.O_2023\simulacion y practicas\ejer5\ejer5\bin\Debug\ejer5.pdb
+C:\Users\Alejandro oviedo\Desktop\poo\P.O.O_2023\simulacion y practicas\ejer5\ejer5\obj\Debug\ejer5.csproj.AssemblyReference.cache
+C:\Users\Alejandro oviedo\Desktop\poo\P.O.O_2023\simulacion y practicas\ejer5\ejer5\obj\Debug\ejer5.csproj.SuggestedBindingRedirects.cache
+C:\Users\Alejandro oviedo\Desktop\poo\P.O.O_2023\simulacion y practicas\ejer5\ejer5\obj\Debug\ejer5.csproj.CoreCompileInputs.cache
+C:\Users\Alejandro oviedo\Desktop\poo\P.O.O_2023\simulacion y practicas\ejer5\ejer5\obj\Debug\ejer5.exe
+C:\Users\Alejandro oviedo\Desktop\poo\P.O.O_2023\simulacion y practicas\ejer5\ejer5\obj\Debug\ejer5.pdb
