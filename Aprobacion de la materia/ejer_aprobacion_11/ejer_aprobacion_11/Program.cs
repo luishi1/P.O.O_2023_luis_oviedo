@@ -51,7 +51,7 @@ namespace ejer_aprobacion_11
 
         public void Ganar(double monto)
         {
-            dinero += monto;
+            this.dinero += monto;
             cant_ganadas++;
         }
 
@@ -100,8 +100,7 @@ namespace ejer_aprobacion_11
                         break;
                     case 2:
                         resultados.Add("C");
-                        break;
-
+                        break;          
                 }
             }
         }
@@ -122,7 +121,7 @@ namespace ejer_aprobacion_11
 
                 if (aciertos >= new Constantes().Resultados)
                 {
-                    double monto = dineroacumulado / jugadores.Count;
+                    double monto = dineroacumulado ;
                     j.Ganar(monto);
                 }
             }
@@ -132,7 +131,7 @@ namespace ejer_aprobacion_11
         {
             foreach (Jugador j in jugadores)
             {
-                if (j.cant_ganadas == new Constantes().Resultados)
+                if (j.cant_ganadas >= new Constantes().Resultados)
                 {
                     Console.WriteLine("El jugador de nombre " + j.name + " que era el jugador N° " + j.numero + " es el Ganador");
                     Console.WriteLine("Gano un total de " + j.dinero + "$");
@@ -161,19 +160,18 @@ namespace ejer_aprobacion_11
 
             foreach (Jugador j in jugadores)
             {
-                if (j.dinero > 0)
-                {
-                    Console.WriteLine("--------------------------------");
-                    j.MostrarJugador();
-                    Console.WriteLine("Ingrese una opcion A , B o C");
-                    for (int i = 0; i < new Constantes().CantPartidos; i++)
-                    {
-                        Console.WriteLine("Partido N° " + (i + 1));
-                        string opcion = Console.ReadLine();
-                        j.apuestas.Add(opcion);
-                    }
-                    Console.WriteLine("--------------------------------");
-                }
+           
+            Console.WriteLine("--------------------------------");
+            j.MostrarJugador();
+            Console.WriteLine("Ingrese una opcion A , B o C");
+            for (int i = 0; i < new Constantes().CantPartidos; i++)
+            {
+                Console.WriteLine("Partido N° " + (i + 1));
+                string opcion = Console.ReadLine();
+                j.apuestas.Add(opcion);
+            }
+            dineroacumulado = +dineroacumulado + j.dinero;
+            Console.WriteLine("--------------------------------");
             }
             Console.WriteLine("--------------------------------");
             ResultadosPosibles();
@@ -193,5 +191,4 @@ namespace ejer_aprobacion_11
             Console.ReadKey();
         }
     }
-
 }
