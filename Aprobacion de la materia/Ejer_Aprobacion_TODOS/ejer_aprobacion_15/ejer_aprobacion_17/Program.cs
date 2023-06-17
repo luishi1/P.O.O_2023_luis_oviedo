@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Diagnostics.Eventing.Reader;
 
 namespace ejer_aprobacion_17
 {
@@ -57,7 +56,6 @@ namespace ejer_aprobacion_17
             return totalCartas;
         }
 
-
         public List<Cartas> DarCartas(int cantidad)
         {
             List<Cartas> cartasmano = new List<Cartas>();
@@ -110,9 +108,22 @@ namespace ejer_aprobacion_17
                 }
             }
         }
+    }
 
+    public enum PalosBarEspañola
+    {
+        OROS,
+        COPAS,
+        ESPADAS,
+        BASTOS
+    }
 
-
+    public enum PalosBarFrancesa
+    {
+        DIAMANTES,
+        PICAS,
+        CORAZONES,
+        TREBOLES
     }
 
     public class BarajaEspañola : Baraja
@@ -126,34 +137,27 @@ namespace ejer_aprobacion_17
 
         public override void CrearBaraja()
         {
-            string[] palo = { "OROS", "COPAS", "ESPADAS", "BASTOS" };
-            foreach (string p in palo)
+            foreach (PalosBarEspañola palo in Enum.GetValues(typeof(PalosBarEspañola)))
             {
                 for (int i = 1; i <= 12; i++)
                 {
                     if (IncluirOchoNueve || (i != 8 && i != 9))
                     {
-                        Cartas carta = new Cartas(i, p);
+                        Cartas carta = new Cartas(i, palo.ToString());
                         cartas.Add(carta);
                     }
                 }
 
                 if (IncluirOchoNueve)
                 {
-                    Cartas cartaOcho = new Cartas(8, p);
+                    Cartas cartaOcho = new Cartas(8, palo.ToString());
                     cartas.Add(cartaOcho);
 
-                    Cartas cartaNueve = new Cartas(9, p);
+                    Cartas cartaNueve = new Cartas(9, palo.ToString());
                     cartas.Add(cartaNueve);
                 }
             }
         }
-        public override int CartasDisponibles()
-        {
-            return totalCartas;
-        }
-
-
     }
 
     public class BarajaFrancesa : Baraja
@@ -164,13 +168,12 @@ namespace ejer_aprobacion_17
 
         public override void CrearBaraja()
         {
-            string[] palo = { "DIAMANTES", "PICAS", "CORAZONES", "TREBOLES" };
-            foreach (string p in palo)
+            foreach (PalosBarFrancesa palo in Enum.GetValues(typeof(PalosBarFrancesa)))
             {
                 for (int i = 1; i <= cartasPorPalo; i++)
                 {
                     string numeroCarta = ObtenerNumeroCarta(i);
-                    Cartas carta = new Cartas(i, p);
+                    Cartas carta = new Cartas(i, palo.ToString());
                     cartas.Add(carta);
                 }
             }
@@ -195,25 +198,17 @@ namespace ejer_aprobacion_17
 
         public void CartaRoja(Cartas carta)
         {
-            if (carta.palo == "CORAZONES" || carta.palo == "DIAMANTES")
+            if (carta.palo == PalosBarFrancesa.CORAZONES.ToString() || carta.palo == PalosBarFrancesa.DIAMANTES.ToString())
             {
                 Console.WriteLine("La carta es roja");
-            }
-            else
-            {
-                Console.WriteLine("La carta no es roja");
             }
         }
 
         public void CartaNegra(Cartas carta)
         {
-            if (carta.palo == "PICAS" || carta.palo == "TREBOLES")
+            if (carta.palo == PalosBarFrancesa.PICAS.ToString() || carta.palo == PalosBarFrancesa.TREBOLES.ToString())
             {
                 Console.WriteLine("La carta es negra");
-            }
-            else
-            {
-                Console.WriteLine("La carta no es negra");
             }
         }
     }
@@ -297,6 +292,8 @@ namespace ejer_aprobacion_17
                         Console.WriteLine("No se ha creado ninguna baraja.");
                     }
                 }
+                // ...
+
                 else if (opcion == 5)
                 {
                     if (baraja != null)
@@ -307,6 +304,13 @@ namespace ejer_aprobacion_17
                         foreach (Cartas carta in cartasmano)
                         {
                             Console.WriteLine(carta.numero + " " + carta.palo);
+
+                            BarajaFrancesa barajaFrancesa = baraja as BarajaFrancesa;
+                            if (barajaFrancesa != null)
+                            {
+                                barajaFrancesa.CartaRoja(carta);
+                                barajaFrancesa.CartaNegra(carta);
+                            }
                         }
                     }
                     else
