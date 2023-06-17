@@ -16,7 +16,7 @@ namespace ejer_aprobacion_15
             }
         }
 
-        public double CalcularPrecio() 
+        public double CalcularPrecio()
         {
             double preciototal = 0;
             foreach (List<Bebida> estanteria in estanterias)
@@ -24,10 +24,15 @@ namespace ejer_aprobacion_15
                 foreach (Bebida b in estanteria)
                 {
                     preciototal += b.precio;
+                    if (b is Gaseosa gaseosa)
+                    {
+                        gaseosa.AplicarDescuentoPromocion();
+                    }
                 }
             }
             return preciototal;
         }
+
         public double CalcularPrecionombre(string marca)
         {
             double preciototal = 0;
@@ -177,6 +182,14 @@ namespace ejer_aprobacion_15
             else if(promocion == false)
             {
                 Console.WriteLine("No posee promocion");
+            }
+        }
+        public void AplicarDescuentoPromocion()
+        {
+            if (promocion)
+            {
+                double descuento = precio * 0.1;
+                precio -= descuento;
             }
         }
     }
