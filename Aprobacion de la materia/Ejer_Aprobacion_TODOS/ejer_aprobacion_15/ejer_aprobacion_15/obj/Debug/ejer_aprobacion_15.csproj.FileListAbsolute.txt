@@ -1,0 +1,16 @@
+C:\Users\Alejandro oviedo\Desktop\poo\P.O.O_2023\Aprobacion de la materia\ejer_aprobacion_15\ejer_aprobacion_15\bin\Debug\ejer_aprobacion_15.exe.config
+C:\Users\Alejandro oviedo\Desktop\poo\P.O.O_2023\Aprobacion de la materia\ejer_aprobacion_15\ejer_aprobacion_15\bin\Debug\ejer_aprobacion_15.exe
+C:\Users\Alejandro oviedo\Desktop\poo\P.O.O_2023\Aprobacion de la materia\ejer_aprobacion_15\ejer_aprobacion_15\bin\Debug\ejer_aprobacion_15.pdb
+C:\Users\Alejandro oviedo\Desktop\poo\P.O.O_2023\Aprobacion de la materia\ejer_aprobacion_15\ejer_aprobacion_15\obj\Debug\ejer_aprobacion_15.csproj.AssemblyReference.cache
+C:\Users\Alejandro oviedo\Desktop\poo\P.O.O_2023\Aprobacion de la materia\ejer_aprobacion_15\ejer_aprobacion_15\obj\Debug\ejer_aprobacion_15.csproj.SuggestedBindingRedirects.cache
+C:\Users\Alejandro oviedo\Desktop\poo\P.O.O_2023\Aprobacion de la materia\ejer_aprobacion_15\ejer_aprobacion_15\obj\Debug\ejer_aprobacion_15.csproj.CoreCompileInputs.cache
+C:\Users\Alejandro oviedo\Desktop\poo\P.O.O_2023\Aprobacion de la materia\ejer_aprobacion_15\ejer_aprobacion_15\obj\Debug\ejer_aprobacion_15.exe
+C:\Users\Alejandro oviedo\Desktop\poo\P.O.O_2023\Aprobacion de la materia\ejer_aprobacion_15\ejer_aprobacion_15\obj\Debug\ejer_aprobacion_15.pdb
+C:\Users\Alejandro oviedo\Desktop\poo\P.O.O_2023\Aprobacion de la materia\Ejer_Aprobacion_TODOS\ejer_aprobacion_15\ejer_aprobacion_15\bin\Debug\ejer_aprobacion_15.exe.config
+C:\Users\Alejandro oviedo\Desktop\poo\P.O.O_2023\Aprobacion de la materia\Ejer_Aprobacion_TODOS\ejer_aprobacion_15\ejer_aprobacion_15\bin\Debug\ejer_aprobacion_15.exe
+C:\Users\Alejandro oviedo\Desktop\poo\P.O.O_2023\Aprobacion de la materia\Ejer_Aprobacion_TODOS\ejer_aprobacion_15\ejer_aprobacion_15\bin\Debug\ejer_aprobacion_15.pdb
+C:\Users\Alejandro oviedo\Desktop\poo\P.O.O_2023\Aprobacion de la materia\Ejer_Aprobacion_TODOS\ejer_aprobacion_15\ejer_aprobacion_15\obj\Debug\ejer_aprobacion_15.csproj.AssemblyReference.cache
+C:\Users\Alejandro oviedo\Desktop\poo\P.O.O_2023\Aprobacion de la materia\Ejer_Aprobacion_TODOS\ejer_aprobacion_15\ejer_aprobacion_15\obj\Debug\ejer_aprobacion_15.csproj.SuggestedBindingRedirects.cache
+C:\Users\Alejandro oviedo\Desktop\poo\P.O.O_2023\Aprobacion de la materia\Ejer_Aprobacion_TODOS\ejer_aprobacion_15\ejer_aprobacion_15\obj\Debug\ejer_aprobacion_15.csproj.CoreCompileInputs.cache
+C:\Users\Alejandro oviedo\Desktop\poo\P.O.O_2023\Aprobacion de la materia\Ejer_Aprobacion_TODOS\ejer_aprobacion_15\ejer_aprobacion_15\obj\Debug\ejer_aprobacion_15.exe
+C:\Users\Alejandro oviedo\Desktop\poo\P.O.O_2023\Aprobacion de la materia\Ejer_Aprobacion_TODOS\ejer_aprobacion_15\ejer_aprobacion_15\obj\Debug\ejer_aprobacion_15.pdb
