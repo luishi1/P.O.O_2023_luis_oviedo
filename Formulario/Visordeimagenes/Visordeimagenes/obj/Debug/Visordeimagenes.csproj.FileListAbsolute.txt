@@ -1,0 +1,11 @@
+C:\Users\Alejandro oviedo\Desktop\poo\P.O.O_2023\Formulario\Visordeimagenes\Visordeimagenes\bin\Debug\Visordeimagenes.exe.config
+C:\Users\Alejandro oviedo\Desktop\poo\P.O.O_2023\Formulario\Visordeimagenes\Visordeimagenes\bin\Debug\Visordeimagenes.exe
+C:\Users\Alejandro oviedo\Desktop\poo\P.O.O_2023\Formulario\Visordeimagenes\Visordeimagenes\bin\Debug\Visordeimagenes.pdb
+C:\Users\Alejandro oviedo\Desktop\poo\P.O.O_2023\Formulario\Visordeimagenes\Visordeimagenes\obj\Debug\Visordeimagenes.csproj.AssemblyReference.cache
+C:\Users\Alejandro oviedo\Desktop\poo\P.O.O_2023\Formulario\Visordeimagenes\Visordeimagenes\obj\Debug\Visordeimagenes.csproj.SuggestedBindingRedirects.cache
+C:\Users\Alejandro oviedo\Desktop\poo\P.O.O_2023\Formulario\Visordeimagenes\Visordeimagenes\obj\Debug\Visordeimagenes.Form1.resources
+C:\Users\Alejandro oviedo\Desktop\poo\P.O.O_2023\Formulario\Visordeimagenes\Visordeimagenes\obj\Debug\Visordeimagenes.Properties.Resources.resources
+C:\Users\Alejandro oviedo\Desktop\poo\P.O.O_2023\Formulario\Visordeimagenes\Visordeimagenes\obj\Debug\Visordeimagenes.csproj.GenerateResource.cache
+C:\Users\Alejandro oviedo\Desktop\poo\P.O.O_2023\Formulario\Visordeimagenes\Visordeimagenes\obj\Debug\Visordeimagenes.csproj.CoreCompileInputs.cache
+C:\Users\Alejandro oviedo\Desktop\poo\P.O.O_2023\Formulario\Visordeimagenes\Visordeimagenes\obj\Debug\Visordeimagenes.exe
+C:\Users\Alejandro oviedo\Desktop\poo\P.O.O_2023\Formulario\Visordeimagenes\Visordeimagenes\obj\Debug\Visordeimagenes.pdb
