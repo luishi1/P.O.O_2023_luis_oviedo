@@ -1,0 +1,11 @@
+C:\Users\Alejandro oviedo\Desktop\poo\P.O.O_2023\Formulario\MP3\MP3\bin\Debug\MP3.exe.config
+C:\Users\Alejandro oviedo\Desktop\poo\P.O.O_2023\Formulario\MP3\MP3\bin\Debug\MP3.exe
+C:\Users\Alejandro oviedo\Desktop\poo\P.O.O_2023\Formulario\MP3\MP3\bin\Debug\MP3.pdb
+C:\Users\Alejandro oviedo\Desktop\poo\P.O.O_2023\Formulario\MP3\MP3\obj\Debug\MP3.csproj.AssemblyReference.cache
+C:\Users\Alejandro oviedo\Desktop\poo\P.O.O_2023\Formulario\MP3\MP3\obj\Debug\MP3.csproj.SuggestedBindingRedirects.cache
+C:\Users\Alejandro oviedo\Desktop\poo\P.O.O_2023\Formulario\MP3\MP3\obj\Debug\MP3.Form1.resources
+C:\Users\Alejandro oviedo\Desktop\poo\P.O.O_2023\Formulario\MP3\MP3\obj\Debug\MP3.Properties.Resources.resources
+C:\Users\Alejandro oviedo\Desktop\poo\P.O.O_2023\Formulario\MP3\MP3\obj\Debug\MP3.csproj.GenerateResource.cache
+C:\Users\Alejandro oviedo\Desktop\poo\P.O.O_2023\Formulario\MP3\MP3\obj\Debug\MP3.csproj.CoreCompileInputs.cache
+C:\Users\Alejandro oviedo\Desktop\poo\P.O.O_2023\Formulario\MP3\MP3\obj\Debug\MP3.exe
+C:\Users\Alejandro oviedo\Desktop\poo\P.O.O_2023\Formulario\MP3\MP3\obj\Debug\MP3.pdb
