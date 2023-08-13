@@ -83,5 +83,21 @@
   <ItemGroup>
     <None Include="Resources\ant.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\oaaaa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shadowwizard.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Musica\Cancion 1.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Musica\cancion 2.mp3" />
+    <Content Include="Musica\cancion 3.mp3" />
+    <Content Include="Musica\cancion 4.mp3" />
+    <Content Include="Musica\cancion 5.mp3" />
+    <None Include="Resources\vinilo.gif" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
