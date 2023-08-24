@@ -228,6 +228,16 @@ namespace MP3
         {
 
         }
+
+        private void borrarbtn_Click(object sender, EventArgs e)
+        {
+            if (listamusica.Items.Count > 0)
+            {
+                int indexeliminado = listamusica.SelectedIndex;
+                listamusica.Items.RemoveAt(indexeliminado);
+                MP3.Stop();
+            }
+        }
     }
 
     public class MP3
