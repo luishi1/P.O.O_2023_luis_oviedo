@@ -1,46 +1,33 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
-using Microsoft.Xna.Framework.Media;
-using System.Collections.Generic;
 using System;
-using System.Runtime.InteropServices;
 
 namespace Juego
 {
     public class Game1 : Game
     {
         private GraphicsDeviceManager _graphics;
-        // Encarga de dibujar las texturas en pantalla.
         private SpriteBatch _spriteBatch;
-        // Crea la variable de textura 2D "pruebas".
-        private Texture2D _pruebasTexture;
-        // Crea la variable de posición de "pruebas"
         private Vector2 _pruebasPosition;
-        // Crea la variable de la velocidad en la que se moverá el sprite.
-        private Vector2 _pruebasSpeed = new Vector2(3, 3);
+        private Texture2D[] ProtaCamUp;
+        private Texture2D[] ProtaCamDown;
+        private Texture2D[] ProtaCamLeft;
+        private Texture2D[] ProtaCamRight;
+        private int frameactual = 0;
+        private int frameWidth;
+        private float animationTimer = 0f;
+        private float frameDuration = 0.1f;
+        private Direction currentDirection = Direction.Right;
+        private Direction lastDirection = Direction.Right;
 
-        private Texture2D _manzanaTexture;
-        private Vector2 _manzanaPosition;
-
-        private Song _backgroundMusic;
-
-        private bool _manzanaTocada = false; // Bandera para controlar si se tocó la manzana
-
-
-        //mostrar todos los sprites
-
-        private Texture2D charaset;
-        // A timer that stores milliseconds.
-        float timer;
-        // An int that is the threshold for the timer.
-        int threshold;
-        // A Rectangle array that stores sourceRectangles for animations.
-        Rectangle[] sourceRectangles;
-        // These bytes tell the spriteBatch.Draw() what sourceRectangle to display.
-        byte previousAnimationIndex;
-        byte currentAnimationIndex;
-
+        enum Direction
+        {
+            Up,
+            Down,
+            Left,
+            Right
+        }
 
         public Game1()
         {
@@ -53,108 +40,135 @@ namespace Juego
             base.Initialize();
         }
 
-
         protected override void LoadContent()
         {
             _spriteBatch = new SpriteBatch(GraphicsDevice);
-            _pruebasTexture = Content.Load<Texture2D>("Sprites/Pf1");
+
             _pruebasPosition = new Vector2(100, 100);
-            charaset = Content.Load<Texture2D>("Sprites/charaset");
-            _manzanaTexture = Content.Load<Texture2D>("Sprites/SpriteTrainer");
-            _manzanaPosition = new Vector2(GraphicsDevice.Viewport.Width / 2 - _manzanaTexture.Width / 2, GraphicsDevice.Viewport.Height / 2 - _manzanaTexture.Height / 2);
 
-            timer = 0;
-            threshold = 250;
-            sourceRectangles = new Rectangle[3];
-            sourceRectangles[0] = new Rectangle(0, 128, 48, 64);
-            sourceRectangles[1] = new Rectangle(48, 128, 48, 64);
-            sourceRectangles[2] = new Rectangle(96, 128, 48, 64);
-            previousAnimationIndex = 2;
-            currentAnimationIndex = 1;
+            ProtaCamUp = new Texture2D[3];
+            ProtaCamUp[0] = Content.Load<Texture2D>("Sprites/pc_up1");
+            ProtaCamUp[1] = Content.Load<Texture2D>("Sprites/pc_up2");
+            ProtaCamUp[2] = Content.Load<Texture2D>("Sprites/pc_up3");
 
+            ProtaCamDown = new Texture2D[3];
+            ProtaCamDown[0] = Content.Load<Texture2D>("Sprites/pc_down1");
+            ProtaCamDown[1] = Content.Load<Texture2D>("Sprites/pc_down2");
+            ProtaCamDown[2] = Content.Load<Texture2D>("Sprites/pc_down3");
+
+            ProtaCamLeft = new Texture2D[3];
+            ProtaCamLeft[0] = Content.Load<Texture2D>("Sprites/pc_left1");
+            ProtaCamLeft[1] = Content.Load<Texture2D>("Sprites/pc_left2");
+            ProtaCamLeft[2] = Content.Load<Texture2D>("Sprites/pc_left3");
+
+            ProtaCamRight = new Texture2D[3];
+            ProtaCamRight[0] = Content.Load<Texture2D>("Sprites/pc_right1");
+            ProtaCamRight[1] = Content.Load<Texture2D>("Sprites/pc_right2");
+            ProtaCamRight[2] = Content.Load<Texture2D>("Sprites/pc_right3");
+
+            frameWidth = ProtaCamRight[0].Width / 3;
         }
+
 
         protected override void Update(GameTime gameTime)
         {
-            // Se utiliza para poder recibir el estado del teclado.
             KeyboardState keyboardState = Keyboard.GetState();
+            bool isMoving = false; // Variable para rastrear si el personaje se está moviendo
 
-            // Se ejecuta cuando la variable _manzanaTocada es "false".
-            if (!_manzanaTocada)
+            if (keyboardState.IsKeyDown(Keys.Up))
             {
-                // Movimiento del sprite "pruebas" controlado por las flechas del teclado
+                currentDirection = Direction.Up;
+                _pruebasPosition.Y -= 2;
+                isMoving = true;
+            }
+            else if (keyboardState.IsKeyDown(Keys.Down))
+            {
+                currentDirection = Direction.Down;
+                _pruebasPosition.Y += 2;
+                isMoving = true;
+            }
+            else if (keyboardState.IsKeyDown(Keys.Left))
+            {
+                currentDirection = Direction.Left;
+                _pruebasPosition.X -= 2;
+                isMoving = true;
+            }
+            else if (keyboardState.IsKeyDown(Keys.Right))
+            {
+                currentDirection = Direction.Right;
+                _pruebasPosition.X += 2;
+                isMoving = true;
+            }
 
-                // Cuando se aprieta la tecla "left" se hace la siguiente operación:
-                if (keyboardState.IsKeyDown(Keys.Left))
-                    // Se resta la posición actual en "X" por el valor de la velocidad. Si velocidad es 2 se restan 2 posiciones.
-                    _pruebasPosition.X -= 2;
+            if (currentDirection != lastDirection)
+            {
+                lastDirection = currentDirection;
+            }
 
-                // Cuando se aprieta la tecla "right" se hace la siguiente operación:
-                if (keyboardState.IsKeyDown(Keys.Right))
-                    // Se suma la posición actual en "X" por el valor de la velocidad.
-                    _pruebasPosition.X += 2;
-
-                // Cuando se aprieta la tecla "up" se hace la siguiente operación:
-                if (keyboardState.IsKeyDown(Keys.Up))
-                    // Se resta la posición actual en "Y" por el valor de la velocidad.
-                    _pruebasPosition.Y -= 2;
-
-                // Cuando se aprieta la tecla "down" se hace la siguiente operación:
-                if (keyboardState.IsKeyDown(Keys.Down))
-                    // Se suma la posición actual en "Y" por el valor de la velocidad.
-                    _pruebasPosition.Y += 2;
-
-                // Verificar colisión con la manzana
-                Rectangle pruebasRectangle = new Rectangle((int)_pruebasPosition.X, (int)_pruebasPosition.Y, _pruebasTexture.Width, _pruebasTexture.Height);
-                // Es la caja de coliciones de "pruebas" y se basa en el tamaño de la imgane.
-                Rectangle manzanaRectangle = new Rectangle((int)_manzanaPosition.X, (int)_manzanaPosition.Y, _manzanaTexture.Width, _manzanaTexture.Height);
-                // Es la caja de coliciones de "manzana" y se basa en el tamaño de la imgane.
-
-                if (pruebasRectangle.Intersects(manzanaRectangle))
+            if (isMoving)
+            {
+                animationTimer += (float)gameTime.ElapsedGameTime.TotalSeconds;
+                if (animationTimer > frameDuration)
                 {
-                    _manzanaTocada = true;
+                    frameactual = (frameactual + 1) % 3;
+                    animationTimer = 0f;
                 }
             }
 
-            if (timer > threshold)
-            {
-                if (currentAnimationIndex == 1)
-                {
-                    if (previousAnimationIndex == 0)
-                    {
-                        currentAnimationIndex = 2;
-                    }
-                    else
-                    {
-                        currentAnimationIndex = 0;
-                    }
-                    previousAnimationIndex = currentAnimationIndex;
-                }
-                else
-                {
-                    currentAnimationIndex = 1;
-                }
-                timer = 0;
-            }
-            else
-            {
-                timer += (float)gameTime.ElapsedGameTime.TotalMilliseconds;
-            }
             base.Update(gameTime);
         }
 
+
         protected override void Draw(GameTime gameTime)
         {
-            GraphicsDevice.Clear(Color.CornflowerBlue);
-            // Limpia 20 veces por segundo la imagen.
+            GraphicsDevice.Clear(Color.Crimson);
+
             _spriteBatch.Begin();
-            _spriteBatch.Draw(charaset, new Vector2(0, 100), sourceRectangles[currentAnimationIndex], Color.White);
+
+            // Dibuja la animación en función de la dirección actual o la última dirección si no se está moviendo
+            switch (currentDirection)
+            {
+                case Direction.Up:
+                    _spriteBatch.Draw(ProtaCamUp[frameactual], _pruebasPosition, Color.White);
+                    break;
+                case Direction.Down:
+                    _spriteBatch.Draw(ProtaCamDown[frameactual], _pruebasPosition, Color.White);
+                    break;
+                case Direction.Left:
+                    _spriteBatch.Draw(ProtaCamLeft[frameactual], _pruebasPosition, Color.White);
+                    break;
+                case Direction.Right:
+                    _spriteBatch.Draw(ProtaCamRight[frameactual], _pruebasPosition, Color.White);
+                    break;
+                default:
+
+                    switch (lastDirection)
+                    {
+                        case Direction.Up:
+                            _spriteBatch.Draw(ProtaCamUp[1], _pruebasPosition, Color.White);
+                            break;
+                        case Direction.Down:
+                            _spriteBatch.Draw(ProtaCamDown[1], _pruebasPosition, Color.White);
+                            break;
+                        case Direction.Left:
+                            _spriteBatch.Draw(ProtaCamLeft[1], _pruebasPosition, Color.White);
+                            break;
+                        case Direction.Right:
+                            _spriteBatch.Draw(ProtaCamRight[1], _pruebasPosition, Color.White);
+                            break;
+                    }
+                    break;
+            }
+
             _spriteBatch.End();
 
             base.Draw(gameTime);
-
         }
 
-
+        static void Main(string[] args)
+        {
+            using (var game = new Game1())
+                game.Run();
+        }
     }
 }

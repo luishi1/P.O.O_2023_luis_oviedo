@@ -4,12 +4,28 @@
   <Platform>DesktopGL</Platform>
   <Config />
   <SourceFiles>
-    <File>C:/Users/Alumno/Desktop/P.O.O_2023_luis_oviedo/MonoGame/Juego/Juego/Content/Sprites/charaset.png</File>
-    <File>C:/Users/Alumno/Desktop/P.O.O_2023_luis_oviedo/MonoGame/Juego/Juego/Content/Sprites/Pf1.png</File>
-    <File>C:/Users/Alumno/Desktop/P.O.O_2023_luis_oviedo/MonoGame/Juego/Juego/Content/Sprites/prueba.png</File>
-    <File>C:/Users/Alumno/Desktop/P.O.O_2023_luis_oviedo/MonoGame/Juego/Juego/Content/Sprites/SpriteTrainer.png</File>
+    <File>C:/Users/Alumno/Desktop/P.O.O_2023_luis_oviedo/MonoGame/Juego/Juego/Content/Sprites/pc_down1.png</File>
+    <File>C:/Users/Alumno/Desktop/P.O.O_2023_luis_oviedo/MonoGame/Juego/Juego/Content/Sprites/pc_down2.png</File>
+    <File>C:/Users/Alumno/Desktop/P.O.O_2023_luis_oviedo/MonoGame/Juego/Juego/Content/Sprites/pc_down3.png</File>
+    <File>C:/Users/Alumno/Desktop/P.O.O_2023_luis_oviedo/MonoGame/Juego/Juego/Content/Sprites/pc_left1.png</File>
+    <File>C:/Users/Alumno/Desktop/P.O.O_2023_luis_oviedo/MonoGame/Juego/Juego/Content/Sprites/pc_left2.png</File>
+    <File>C:/Users/Alumno/Desktop/P.O.O_2023_luis_oviedo/MonoGame/Juego/Juego/Content/Sprites/pc_left3.png</File>
+    <File>C:/Users/Alumno/Desktop/P.O.O_2023_luis_oviedo/MonoGame/Juego/Juego/Content/Sprites/pc_right1.png</File>
+    <File>C:/Users/Alumno/Desktop/P.O.O_2023_luis_oviedo/MonoGame/Juego/Juego/Content/Sprites/pc_right2.png</File>
+    <File>C:/Users/Alumno/Desktop/P.O.O_2023_luis_oviedo/MonoGame/Juego/Juego/Content/Sprites/pc_right3.png</File>
+    <File>C:/Users/Alumno/Desktop/P.O.O_2023_luis_oviedo/MonoGame/Juego/Juego/Content/Sprites/pc_up1.png</File>
+    <File>C:/Users/Alumno/Desktop/P.O.O_2023_luis_oviedo/MonoGame/Juego/Juego/Content/Sprites/pc_up2.png</File>
+    <File>C:/Users/Alumno/Desktop/P.O.O_2023_luis_oviedo/MonoGame/Juego/Juego/Content/Sprites/pc_up3.png</File>
   </SourceFiles>
   <DestFiles>
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />

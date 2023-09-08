@@ -26,4 +26,15 @@ C:\Users\Alumno\Desktop\P.O.O_2023_luis_oviedo\MonoGame\Juego\Juego\obj\Debug\ne
 C:\Users\Alumno\Desktop\P.O.O_2023_luis_oviedo\MonoGame\Juego\Juego\bin\Debug\net6.0\Content\Sprites\Pf1.xnb
 C:\Users\Alumno\Desktop\P.O.O_2023_luis_oviedo\MonoGame\Juego\Juego\bin\Debug\net6.0\Content\Sprites\SpriteTrainer.xnb
 C:\Users\Alumno\Desktop\P.O.O_2023_luis_oviedo\MonoGame\Juego\Juego\bin\Debug\net6.0\Content\Sprites\prueba.xnb
-C:\Users\Alumno\Desktop\P.O.O_2023_luis_oviedo\MonoGame\Juego\Juego\bin\Debug\net6.0\Content\Sprites\charaset.xnb
+C:\Users\Alumno\Desktop\P.O.O_2023_luis_oviedo\MonoGame\Juego\Juego\bin\Debug\net6.0\Content\Sprites\pc_down1.xnb
+C:\Users\Alumno\Desktop\P.O.O_2023_luis_oviedo\MonoGame\Juego\Juego\bin\Debug\net6.0\Content\Sprites\pc_down2.xnb
+C:\Users\Alumno\Desktop\P.O.O_2023_luis_oviedo\MonoGame\Juego\Juego\bin\Debug\net6.0\Content\Sprites\pc_down3.xnb
+C:\Users\Alumno\Desktop\P.O.O_2023_luis_oviedo\MonoGame\Juego\Juego\bin\Debug\net6.0\Content\Sprites\pc_left1.xnb
+C:\Users\Alumno\Desktop\P.O.O_2023_luis_oviedo\MonoGame\Juego\Juego\bin\Debug\net6.0\Content\Sprites\pc_left2.xnb
+C:\Users\Alumno\Desktop\P.O.O_2023_luis_oviedo\MonoGame\Juego\Juego\bin\Debug\net6.0\Content\Sprites\pc_left3.xnb
+C:\Users\Alumno\Desktop\P.O.O_2023_luis_oviedo\MonoGame\Juego\Juego\bin\Debug\net6.0\Content\Sprites\pc_right1.xnb
+C:\Users\Alumno\Desktop\P.O.O_2023_luis_oviedo\MonoGame\Juego\Juego\bin\Debug\net6.0\Content\Sprites\pc_right2.xnb
+C:\Users\Alumno\Desktop\P.O.O_2023_luis_oviedo\MonoGame\Juego\Juego\bin\Debug\net6.0\Content\Sprites\pc_right3.xnb
+C:\Users\Alumno\Desktop\P.O.O_2023_luis_oviedo\MonoGame\Juego\Juego\bin\Debug\net6.0\Content\Sprites\pc_up1.xnb
+C:\Users\Alumno\Desktop\P.O.O_2023_luis_oviedo\MonoGame\Juego\Juego\bin\Debug\net6.0\Content\Sprites\pc_up2.xnb
+C:\Users\Alumno\Desktop\P.O.O_2023_luis_oviedo\MonoGame\Juego\Juego\bin\Debug\net6.0\Content\Sprites\pc_up3.xnb
