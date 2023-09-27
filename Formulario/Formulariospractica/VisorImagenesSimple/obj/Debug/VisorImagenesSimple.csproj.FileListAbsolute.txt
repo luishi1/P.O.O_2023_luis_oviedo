@@ -1,0 +1,10 @@
+C:\Users\Alejandro oviedo\Desktop\P.O.O_2023_luis_oviedo\Formulario\Formulariospractica\VisorImagenesSimple\bin\Debug\VisorImagenesSimple.exe.config
+C:\Users\Alejandro oviedo\Desktop\P.O.O_2023_luis_oviedo\Formulario\Formulariospractica\VisorImagenesSimple\bin\Debug\VisorImagenesSimple.exe
+C:\Users\Alejandro oviedo\Desktop\P.O.O_2023_luis_oviedo\Formulario\Formulariospractica\VisorImagenesSimple\bin\Debug\VisorImagenesSimple.pdb
+C:\Users\Alejandro oviedo\Desktop\P.O.O_2023_luis_oviedo\Formulario\Formulariospractica\VisorImagenesSimple\obj\Debug\VisorImagenesSimple.csproj.AssemblyReference.cache
+C:\Users\Alejandro oviedo\Desktop\P.O.O_2023_luis_oviedo\Formulario\Formulariospractica\VisorImagenesSimple\obj\Debug\VisorImagenesSimple.Form1.resources
+C:\Users\Alejandro oviedo\Desktop\P.O.O_2023_luis_oviedo\Formulario\Formulariospractica\VisorImagenesSimple\obj\Debug\VisorImagenesSimple.Properties.Resources.resources
+C:\Users\Alejandro oviedo\Desktop\P.O.O_2023_luis_oviedo\Formulario\Formulariospractica\VisorImagenesSimple\obj\Debug\VisorImagenesSimple.csproj.GenerateResource.cache
+C:\Users\Alejandro oviedo\Desktop\P.O.O_2023_luis_oviedo\Formulario\Formulariospractica\VisorImagenesSimple\obj\Debug\VisorImagenesSimple.csproj.CoreCompileInputs.cache
+C:\Users\Alejandro oviedo\Desktop\P.O.O_2023_luis_oviedo\Formulario\Formulariospractica\VisorImagenesSimple\obj\Debug\VisorImagenesSimple.exe
+C:\Users\Alejandro oviedo\Desktop\P.O.O_2023_luis_oviedo\Formulario\Formulariospractica\VisorImagenesSimple\obj\Debug\VisorImagenesSimple.pdb

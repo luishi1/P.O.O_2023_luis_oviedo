@@ -1,0 +1,10 @@
+C:\Users\Alejandro oviedo\Desktop\P.O.O_2023_luis_oviedo\Formulario\Formulariospractica\ConvertordeTemperatura\bin\Debug\ConvertordeTemperatura.exe.config
+C:\Users\Alejandro oviedo\Desktop\P.O.O_2023_luis_oviedo\Formulario\Formulariospractica\ConvertordeTemperatura\bin\Debug\ConvertordeTemperatura.exe
+C:\Users\Alejandro oviedo\Desktop\P.O.O_2023_luis_oviedo\Formulario\Formulariospractica\ConvertordeTemperatura\bin\Debug\ConvertordeTemperatura.pdb
+C:\Users\Alejandro oviedo\Desktop\P.O.O_2023_luis_oviedo\Formulario\Formulariospractica\ConvertordeTemperatura\obj\Debug\ConvertordeTemperatura.csproj.AssemblyReference.cache
+C:\Users\Alejandro oviedo\Desktop\P.O.O_2023_luis_oviedo\Formulario\Formulariospractica\ConvertordeTemperatura\obj\Debug\ConvertordeTemperatura.Form1.resources
+C:\Users\Alejandro oviedo\Desktop\P.O.O_2023_luis_oviedo\Formulario\Formulariospractica\ConvertordeTemperatura\obj\Debug\ConvertordeTemperatura.Properties.Resources.resources
+C:\Users\Alejandro oviedo\Desktop\P.O.O_2023_luis_oviedo\Formulario\Formulariospractica\ConvertordeTemperatura\obj\Debug\ConvertordeTemperatura.csproj.GenerateResource.cache
+C:\Users\Alejandro oviedo\Desktop\P.O.O_2023_luis_oviedo\Formulario\Formulariospractica\ConvertordeTemperatura\obj\Debug\ConvertordeTemperatura.csproj.CoreCompileInputs.cache
+C:\Users\Alejandro oviedo\Desktop\P.O.O_2023_luis_oviedo\Formulario\Formulariospractica\ConvertordeTemperatura\obj\Debug\ConvertordeTemperatura.exe
+C:\Users\Alejandro oviedo\Desktop\P.O.O_2023_luis_oviedo\Formulario\Formulariospractica\ConvertordeTemperatura\obj\Debug\ConvertordeTemperatura.pdb

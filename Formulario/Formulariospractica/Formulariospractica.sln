@@ -1,0 +1,66 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34031.279
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Formulariospractica", "Formulariospractica\Formulariospractica.csproj", "{4FE386BA-AEB7-4AC0-8551-779E64B9318D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "FormulariosPracticas", "FormulariosPracticas", "{40101728-F5DA-4BCA-A314-879287D313F4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "FormulariosPracticas2", "FormulariosPracticas2", "{318095E5-5821-44F8-9ACA-DF8194B947FA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VisorImagenesSimple", "VisorImagenesSimple\VisorImagenesSimple.csproj", "{B876F2F8-D38A-42AE-A984-41FE0D8AD9BF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "FormulariosPracticas3", "FormulariosPracticas3", "{1B7D5CCD-F3DF-4767-A897-8C0ACEAD83ED}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalculadoraSimple", "CalculadoraSimple\CalculadoraSimple.csproj", "{CD722A5C-68FD-4920-8D49-86848E0262DF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "FormulariosPracticas4", "FormulariosPracticas4", "{9B859129-5CE9-45AA-95B4-C21F7161D4D5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConvertordeTemperatura", "ConvertordeTemperatura\ConvertordeTemperatura.csproj", "{17EB2C41-F5FD-4E80-B572-E1E4FBFA2A45}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "FormulariosPracticas5", "FormulariosPracticas5", "{AE586380-5E7E-43B6-86BD-18D42C5642B8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GestordeTareas", "GestordeTareas\GestordeTareas.csproj", "{AB991181-D972-4EB8-BD27-2B329C065A8F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4FE386BA-AEB7-4AC0-8551-779E64B9318D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4FE386BA-AEB7-4AC0-8551-779E64B9318D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4FE386BA-AEB7-4AC0-8551-779E64B9318D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4FE386BA-AEB7-4AC0-8551-779E64B9318D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B876F2F8-D38A-42AE-A984-41FE0D8AD9BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B876F2F8-D38A-42AE-A984-41FE0D8AD9BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B876F2F8-D38A-42AE-A984-41FE0D8AD9BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B876F2F8-D38A-42AE-A984-41FE0D8AD9BF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CD722A5C-68FD-4920-8D49-86848E0262DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CD722A5C-68FD-4920-8D49-86848E0262DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CD722A5C-68FD-4920-8D49-86848E0262DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CD722A5C-68FD-4920-8D49-86848E0262DF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{17EB2C41-F5FD-4E80-B572-E1E4FBFA2A45}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{17EB2C41-F5FD-4E80-B572-E1E4FBFA2A45}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{17EB2C41-F5FD-4E80-B572-E1E4FBFA2A45}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{17EB2C41-F5FD-4E80-B572-E1E4FBFA2A45}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AB991181-D972-4EB8-BD27-2B329C065A8F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AB991181-D972-4EB8-BD27-2B329C065A8F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AB991181-D972-4EB8-BD27-2B329C065A8F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AB991181-D972-4EB8-BD27-2B329C065A8F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{4FE386BA-AEB7-4AC0-8551-779E64B9318D} = {40101728-F5DA-4BCA-A314-879287D313F4}
+		{B876F2F8-D38A-42AE-A984-41FE0D8AD9BF} = {318095E5-5821-44F8-9ACA-DF8194B947FA}
+		{CD722A5C-68FD-4920-8D49-86848E0262DF} = {1B7D5CCD-F3DF-4767-A897-8C0ACEAD83ED}
+		{17EB2C41-F5FD-4E80-B572-E1E4FBFA2A45} = {9B859129-5CE9-45AA-95B4-C21F7161D4D5}
+		{AB991181-D972-4EB8-BD27-2B329C065A8F} = {AE586380-5E7E-43B6-86BD-18D42C5642B8}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4FE0CB15-7C99-4A35-84A2-7E168D40B9EA}
+	EndGlobalSection
+EndGlobal

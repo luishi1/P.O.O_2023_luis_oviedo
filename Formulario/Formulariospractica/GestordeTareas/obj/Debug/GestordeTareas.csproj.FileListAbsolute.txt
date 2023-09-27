@@ -1,0 +1,10 @@
+C:\Users\Alejandro oviedo\Desktop\P.O.O_2023_luis_oviedo\Formulario\Formulariospractica\GestordeTareas\bin\Debug\GestordeTareas.exe.config
+C:\Users\Alejandro oviedo\Desktop\P.O.O_2023_luis_oviedo\Formulario\Formulariospractica\GestordeTareas\bin\Debug\GestordeTareas.exe
+C:\Users\Alejandro oviedo\Desktop\P.O.O_2023_luis_oviedo\Formulario\Formulariospractica\GestordeTareas\bin\Debug\GestordeTareas.pdb
+C:\Users\Alejandro oviedo\Desktop\P.O.O_2023_luis_oviedo\Formulario\Formulariospractica\GestordeTareas\obj\Debug\GestordeTareas.csproj.AssemblyReference.cache
+C:\Users\Alejandro oviedo\Desktop\P.O.O_2023_luis_oviedo\Formulario\Formulariospractica\GestordeTareas\obj\Debug\GestordeTareas.Form1.resources
+C:\Users\Alejandro oviedo\Desktop\P.O.O_2023_luis_oviedo\Formulario\Formulariospractica\GestordeTareas\obj\Debug\GestordeTareas.Properties.Resources.resources
+C:\Users\Alejandro oviedo\Desktop\P.O.O_2023_luis_oviedo\Formulario\Formulariospractica\GestordeTareas\obj\Debug\GestordeTareas.csproj.GenerateResource.cache
+C:\Users\Alejandro oviedo\Desktop\P.O.O_2023_luis_oviedo\Formulario\Formulariospractica\GestordeTareas\obj\Debug\GestordeTareas.csproj.CoreCompileInputs.cache
+C:\Users\Alejandro oviedo\Desktop\P.O.O_2023_luis_oviedo\Formulario\Formulariospractica\GestordeTareas\obj\Debug\GestordeTareas.exe
+C:\Users\Alejandro oviedo\Desktop\P.O.O_2023_luis_oviedo\Formulario\Formulariospractica\GestordeTareas\obj\Debug\GestordeTareas.pdb

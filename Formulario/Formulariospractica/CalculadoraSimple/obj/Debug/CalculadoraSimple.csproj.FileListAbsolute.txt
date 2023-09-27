@@ -1,0 +1,10 @@
+C:\Users\Alejandro oviedo\Desktop\P.O.O_2023_luis_oviedo\Formulario\Formulariospractica\CalculadoraSimple\bin\Debug\CalculadoraSimple.exe.config
+C:\Users\Alejandro oviedo\Desktop\P.O.O_2023_luis_oviedo\Formulario\Formulariospractica\CalculadoraSimple\bin\Debug\CalculadoraSimple.exe
+C:\Users\Alejandro oviedo\Desktop\P.O.O_2023_luis_oviedo\Formulario\Formulariospractica\CalculadoraSimple\bin\Debug\CalculadoraSimple.pdb
+C:\Users\Alejandro oviedo\Desktop\P.O.O_2023_luis_oviedo\Formulario\Formulariospractica\CalculadoraSimple\obj\Debug\CalculadoraSimple.csproj.AssemblyReference.cache
+C:\Users\Alejandro oviedo\Desktop\P.O.O_2023_luis_oviedo\Formulario\Formulariospractica\CalculadoraSimple\obj\Debug\CalculadoraSimple.Form1.resources
+C:\Users\Alejandro oviedo\Desktop\P.O.O_2023_luis_oviedo\Formulario\Formulariospractica\CalculadoraSimple\obj\Debug\CalculadoraSimple.Properties.Resources.resources
+C:\Users\Alejandro oviedo\Desktop\P.O.O_2023_luis_oviedo\Formulario\Formulariospractica\CalculadoraSimple\obj\Debug\CalculadoraSimple.csproj.GenerateResource.cache
+C:\Users\Alejandro oviedo\Desktop\P.O.O_2023_luis_oviedo\Formulario\Formulariospractica\CalculadoraSimple\obj\Debug\CalculadoraSimple.csproj.CoreCompileInputs.cache
+C:\Users\Alejandro oviedo\Desktop\P.O.O_2023_luis_oviedo\Formulario\Formulariospractica\CalculadoraSimple\obj\Debug\CalculadoraSimple.exe
+C:\Users\Alejandro oviedo\Desktop\P.O.O_2023_luis_oviedo\Formulario\Formulariospractica\CalculadoraSimple\obj\Debug\CalculadoraSimple.pdb

@@ -1,0 +1,10 @@
+C:\Users\Alejandro oviedo\Desktop\P.O.O_2023_luis_oviedo\Formulario\Formulariospractica\Formulariospractica\bin\Debug\Formulariospractica.exe.config
+C:\Users\Alejandro oviedo\Desktop\P.O.O_2023_luis_oviedo\Formulario\Formulariospractica\Formulariospractica\bin\Debug\Formulariospractica.exe
+C:\Users\Alejandro oviedo\Desktop\P.O.O_2023_luis_oviedo\Formulario\Formulariospractica\Formulariospractica\bin\Debug\Formulariospractica.pdb
+C:\Users\Alejandro oviedo\Desktop\P.O.O_2023_luis_oviedo\Formulario\Formulariospractica\Formulariospractica\obj\Debug\Formulariospractica.csproj.AssemblyReference.cache
+C:\Users\Alejandro oviedo\Desktop\P.O.O_2023_luis_oviedo\Formulario\Formulariospractica\Formulariospractica\obj\Debug\Formulariospractica.Form1.resources
+C:\Users\Alejandro oviedo\Desktop\P.O.O_2023_luis_oviedo\Formulario\Formulariospractica\Formulariospractica\obj\Debug\Formulariospractica.Properties.Resources.resources
+C:\Users\Alejandro oviedo\Desktop\P.O.O_2023_luis_oviedo\Formulario\Formulariospractica\Formulariospractica\obj\Debug\Formulariospractica.csproj.GenerateResource.cache
+C:\Users\Alejandro oviedo\Desktop\P.O.O_2023_luis_oviedo\Formulario\Formulariospractica\Formulariospractica\obj\Debug\Formulariospractica.csproj.CoreCompileInputs.cache
+C:\Users\Alejandro oviedo\Desktop\P.O.O_2023_luis_oviedo\Formulario\Formulariospractica\Formulariospractica\obj\Debug\Formulariospractica.exe
+C:\Users\Alejandro oviedo\Desktop\P.O.O_2023_luis_oviedo\Formulario\Formulariospractica\Formulariospractica\obj\Debug\Formulariospractica.pdb
