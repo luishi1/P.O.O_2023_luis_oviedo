@@ -33,23 +33,23 @@ namespace GestordeTareas
 
         private void button4_Click(object sender, EventArgs e)
         {
-            if (listBox1.Items.Count > 0 && listBox1.SelectedIndex != -1)
+            if (listBox1.Items.Count > 0 && listBox1.SelectedItems.Count > -1)
             {
                 string texto = textBox2.Text;
                 int index = listBox1.SelectedIndex;
-                if (textBox2.Text.Length > 0) 
+                if (textBox2.Text.Length > 0)
                 {
                     listBox1.Items[index] = texto;
-                    textBox2.Clear();
+                    listBox2.Text = "";
                 }
                 else
                 {
-                    MessageBox.Show("INGRESE TEXTO EN EL TEXTBOX AL LADO DEL BOTON EDITAR", "ATENCION", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    MessageBox.Show("INGRESE UN TEXTO PRIMERO", "ATENCION", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
                 }
             }
             else
             {
-                MessageBox.Show("INGRESE UN ITEM DEL LISTBOX DE BACKLOG", "ATENCION", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("SELECCIONE UN ITEM PRIMERO ", "ATENCION", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
             }
         }
 
