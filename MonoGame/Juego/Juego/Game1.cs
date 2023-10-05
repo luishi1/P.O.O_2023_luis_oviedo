@@ -22,12 +22,14 @@ namespace Juego
         private Texture2D[] ProtaCamRightJugador2;
         private int frameactualJugador2 = 0;
         private int frameWidth;
-        private float animationTimer = 0f;
+        private float animationTimerJugador1 = 0f;
+        private float animationTimerJugador2 = 0f;
         private float frameDuration = 0.1f;
         private Direction currentDirectionJugador1 = Direction.Right;
         private Direction lastDirectionJugador1 = Direction.Right;
         private Direction currentDirectionJugador2 = Direction.Right;
         private Direction lastDirectionJugador2 = Direction.Right;
+        private bool jugador2Activo = false;  // Variable para controlar si el jugador 2 está activo
 
         enum Direction
         {
@@ -144,6 +146,10 @@ namespace Juego
                 isMovingJugador2 = true;
             }
 
+            if (keyboardStateJugador1.IsKeyDown(Keys.Enter) && !lastKeyboardStateJugador1.IsKeyDown(Keys.Enter))
+            {
+                jugador2Activo = true;
+            }
 
             if (currentDirectionJugador1 != lastDirectionJugador1)
             {
@@ -155,14 +161,23 @@ namespace Juego
                 lastDirectionJugador2 = currentDirectionJugador2;
             }
 
-            if (isMovingJugador1 || isMovingJugador2)
+            if (isMovingJugador1)
             {
-                animationTimer += (float)gameTime.ElapsedGameTime.TotalSeconds;
-                if (animationTimer > frameDuration)
+                animationTimerJugador1 += (float)gameTime.ElapsedGameTime.TotalSeconds;
+                if (animationTimerJugador1 > frameDuration)
                 {
                     frameactualJugador1 = (frameactualJugador1 + 1) % 4;
+                    animationTimerJugador1 = 0f;
+                }
+            }
+
+            if (jugador2Activo && isMovingJugador2)
+            {
+                animationTimerJugador2 += (float)gameTime.ElapsedGameTime.TotalSeconds;
+                if (animationTimerJugador2 > frameDuration)
+                {
                     frameactualJugador2 = (frameactualJugador2 + 1) % 4;
-                    animationTimer = 0f;
+                    animationTimerJugador2 = 0f;
                 }
             }
 
@@ -174,12 +189,16 @@ namespace Juego
 
         protected override void Draw(GameTime gameTime)
         {
-            GraphicsDevice.Clear(Color.Crimson);
+            GraphicsDevice.Clear(Color.WhiteSmoke);
 
             _spriteBatch.Begin();
 
             DrawPlayer(_jugador1Position, ProtaCamUp, ProtaCamDown, ProtaCamLeft, ProtaCamRight, frameactualJugador1, currentDirectionJugador1);
-            DrawPlayer(_jugador2Position, ProtaCamUpJugador2, ProtaCamDownJugador2, ProtaCamLeftJugador2, ProtaCamRightJugador2, frameactualJugador2, currentDirectionJugador2);
+
+            if (jugador2Activo)
+            {
+                DrawPlayer(_jugador2Position, ProtaCamUpJugador2, ProtaCamDownJugador2, ProtaCamLeftJugador2, ProtaCamRightJugador2, frameactualJugador2, currentDirectionJugador2);
+            }
 
             _spriteBatch.End();
 
