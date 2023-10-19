@@ -27,6 +27,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "FormulariosPracticas6", "Fo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ListadoPeliculas", "ListadoPeliculas\ListadoPeliculas.csproj", "{E9FC7F09-8550-4635-885D-590109F2D112}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "FormulariosPracticas7", "FormulariosPracticas7", "{0A596347-6B06-4798-8F9A-443985BB1048}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ListadoPlus", "ListadoPlus\ListadoPlus.csproj", "{E2616F22-7BC6-4CC0-A5AB-64871F4F96E9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -57,6 +61,10 @@ Global
 		{E9FC7F09-8550-4635-885D-590109F2D112}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E9FC7F09-8550-4635-885D-590109F2D112}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E9FC7F09-8550-4635-885D-590109F2D112}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E2616F22-7BC6-4CC0-A5AB-64871F4F96E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E2616F22-7BC6-4CC0-A5AB-64871F4F96E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E2616F22-7BC6-4CC0-A5AB-64871F4F96E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E2616F22-7BC6-4CC0-A5AB-64871F4F96E9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -68,6 +76,7 @@ Global
 		{17EB2C41-F5FD-4E80-B572-E1E4FBFA2A45} = {9B859129-5CE9-45AA-95B4-C21F7161D4D5}
 		{AB991181-D972-4EB8-BD27-2B329C065A8F} = {AE586380-5E7E-43B6-86BD-18D42C5642B8}
 		{E9FC7F09-8550-4635-885D-590109F2D112} = {A51ED4BA-9AC7-4FBB-9FCA-57807CE3801D}
+		{E2616F22-7BC6-4CC0-A5AB-64871F4F96E9} = {0A596347-6B06-4798-8F9A-443985BB1048}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4FE0CB15-7C99-4A35-84A2-7E168D40B9EA}
