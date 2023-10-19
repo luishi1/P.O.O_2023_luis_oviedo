@@ -1,0 +1,11 @@
+C:\Users\Alumno\Desktop\P.O.O_2023_luis_oviedo\Formulario\Formulariospractica\ListadoPlus\bin\Debug\ListadoPlus.exe.config
+C:\Users\Alumno\Desktop\P.O.O_2023_luis_oviedo\Formulario\Formulariospractica\ListadoPlus\bin\Debug\ListadoPlus.exe
+C:\Users\Alumno\Desktop\P.O.O_2023_luis_oviedo\Formulario\Formulariospractica\ListadoPlus\bin\Debug\ListadoPlus.pdb
+C:\Users\Alumno\Desktop\P.O.O_2023_luis_oviedo\Formulario\Formulariospractica\ListadoPlus\obj\Debug\ListadoPlus.csproj.AssemblyReference.cache
+C:\Users\Alumno\Desktop\P.O.O_2023_luis_oviedo\Formulario\Formulariospractica\ListadoPlus\obj\Debug\ListadoPlus.csproj.SuggestedBindingRedirects.cache
+C:\Users\Alumno\Desktop\P.O.O_2023_luis_oviedo\Formulario\Formulariospractica\ListadoPlus\obj\Debug\ListadoPlus.Form1.resources
+C:\Users\Alumno\Desktop\P.O.O_2023_luis_oviedo\Formulario\Formulariospractica\ListadoPlus\obj\Debug\ListadoPlus.Properties.Resources.resources
+C:\Users\Alumno\Desktop\P.O.O_2023_luis_oviedo\Formulario\Formulariospractica\ListadoPlus\obj\Debug\ListadoPlus.csproj.GenerateResource.cache
+C:\Users\Alumno\Desktop\P.O.O_2023_luis_oviedo\Formulario\Formulariospractica\ListadoPlus\obj\Debug\ListadoPlus.csproj.CoreCompileInputs.cache
+C:\Users\Alumno\Desktop\P.O.O_2023_luis_oviedo\Formulario\Formulariospractica\ListadoPlus\obj\Debug\ListadoPlus.exe
+C:\Users\Alumno\Desktop\P.O.O_2023_luis_oviedo\Formulario\Formulariospractica\ListadoPlus\obj\Debug\ListadoPlus.pdb

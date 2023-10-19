@@ -1,0 +1,11 @@
+C:\Users\Alumno\Desktop\P.O.O_2023_luis_oviedo\EvaluacionForms\EvaluacionForm\EvaluacionForm\bin\Debug\EvaluacionForm.exe.config
+C:\Users\Alumno\Desktop\P.O.O_2023_luis_oviedo\EvaluacionForms\EvaluacionForm\EvaluacionForm\bin\Debug\EvaluacionForm.exe
+C:\Users\Alumno\Desktop\P.O.O_2023_luis_oviedo\EvaluacionForms\EvaluacionForm\EvaluacionForm\bin\Debug\EvaluacionForm.pdb
+C:\Users\Alumno\Desktop\P.O.O_2023_luis_oviedo\EvaluacionForms\EvaluacionForm\EvaluacionForm\obj\Debug\EvaluacionForm.csproj.AssemblyReference.cache
+C:\Users\Alumno\Desktop\P.O.O_2023_luis_oviedo\EvaluacionForms\EvaluacionForm\EvaluacionForm\obj\Debug\EvaluacionForm.csproj.SuggestedBindingRedirects.cache
+C:\Users\Alumno\Desktop\P.O.O_2023_luis_oviedo\EvaluacionForms\EvaluacionForm\EvaluacionForm\obj\Debug\EvaluacionForm.Form1.resources
+C:\Users\Alumno\Desktop\P.O.O_2023_luis_oviedo\EvaluacionForms\EvaluacionForm\EvaluacionForm\obj\Debug\EvaluacionForm.Properties.Resources.resources
+C:\Users\Alumno\Desktop\P.O.O_2023_luis_oviedo\EvaluacionForms\EvaluacionForm\EvaluacionForm\obj\Debug\EvaluacionForm.csproj.GenerateResource.cache
+C:\Users\Alumno\Desktop\P.O.O_2023_luis_oviedo\EvaluacionForms\EvaluacionForm\EvaluacionForm\obj\Debug\EvaluacionForm.csproj.CoreCompileInputs.cache
+C:\Users\Alumno\Desktop\P.O.O_2023_luis_oviedo\EvaluacionForms\EvaluacionForm\EvaluacionForm\obj\Debug\EvaluacionForm.exe
+C:\Users\Alumno\Desktop\P.O.O_2023_luis_oviedo\EvaluacionForms\EvaluacionForm\EvaluacionForm\obj\Debug\EvaluacionForm.pdb
