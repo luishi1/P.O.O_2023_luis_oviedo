@@ -49,34 +49,29 @@ namespace Juego.Clases
         Vector2[] circuloRpos = new Vector2[4];
         Vector2[] circuloApos = new Vector2[4];
 
-
-        //Colisiones
-
-
-
         //constructor players
         public Players()
         {
-            jugador1Position = new Vector2(580, 480);
-            jugador2Position = new Vector2(540, 480);
+            jugador1Position = new Vector2(350, 480);
+            jugador2Position = new Vector2(400, 480);
             //totems
-            TotemPos[0] = new Vector2(100, 250);
-            TotemPos[1] = new Vector2(250, 100);
-            TotemPos[2] = new Vector2(1000, 250);
-            TotemPos[3] = new Vector2(850, 100);
+            TotemPos[0] = new Vector2(80, 250);
+            TotemPos[1] = new Vector2(200, 100);
+            TotemPos[2] = new Vector2(620, 250);
+            TotemPos[3] = new Vector2(500, 100);
             //CIRCULOS
 
             //Azul
-            circuloApos[0] = new Vector2(40, 370);
-            circuloApos[1] = new Vector2(190, 220);
-            circuloApos[2] = new Vector2(940, 370);
-            circuloApos[3] = new Vector2(790, 220);
+            circuloApos[0] = new Vector2(30, 370);
+            circuloApos[1] = new Vector2(150, 220);
+            circuloApos[2] = new Vector2(570, 370);
+            circuloApos[3] = new Vector2(450, 220);
 
             //Rojos
-            circuloRpos[0] = new Vector2(180, 370);
-            circuloRpos[1] = new Vector2(330, 220);
-            circuloRpos[2] = new Vector2(1080, 370);
-            circuloRpos[3] = new Vector2(930, 220);
+            circuloRpos[0] = new Vector2(155, 370);
+            circuloRpos[1] = new Vector2(275, 220);
+            circuloRpos[2] = new Vector2(695, 370);
+            circuloRpos[3] = new Vector2(575, 220);
         }
 
         public void LoadContent(ContentManager content)
@@ -273,7 +268,6 @@ namespace Juego.Clases
             bool circuloRojo0Activo = circuloRojoActivo[0];
             bool circuloAzul0Activo = circuloAzulActivo[0];
 
-            // Pong se activa solo si circuloRojo[0] y circuloAzul[0] están activos
             PongActivo = circuloRojo0Activo && circuloAzul0Activo;
         }
 

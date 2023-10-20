@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <SourceFile>C:/Users/Alejandro oviedo/Desktop/P.O.O_2023_luis_oviedo/MonoGame/Juego/Juego/Content/Sprites/PongGame/pedro.png</SourceFile>
-  <SourceTime>2023-10-20T08:47:15.3342954-03:00</SourceTime>
-  <DestFile>C:/Users/Alejandro oviedo/Desktop/P.O.O_2023_luis_oviedo/MonoGame/Juego/Juego/Content/bin/Windows/Content/Sprites/PongGame/pedro.xnb</DestFile>
-  <DestTime>2023-10-20T08:47:26.536445-03:00</DestTime>
+  <SourceFile>C:/Users/Alejandro oviedo/Desktop/P.O.O_2023_luis_oviedo/MonoGame/Juego/Juego/Content/Sprites/PongGame/powerups.png</SourceFile>
+  <SourceTime>2023-10-20T10:52:22.0118936-03:00</SourceTime>
+  <DestFile>C:/Users/Alejandro oviedo/Desktop/P.O.O_2023_luis_oviedo/MonoGame/Juego/Juego/Content/bin/Windows/Content/Sprites/PongGame/powerups.xnb</DestFile>
+  <DestTime>2023-10-20T10:52:30.5627296-03:00</DestTime>
   <Importer>TextureImporter</Importer>
   <ImporterTime>2018-12-08T13:35:54-03:00</ImporterTime>
   <Processor>TextureProcessor</Processor>

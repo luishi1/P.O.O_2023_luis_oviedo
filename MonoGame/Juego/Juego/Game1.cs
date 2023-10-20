@@ -22,13 +22,15 @@ namespace Juego
         private SpriteBatch _spriteBatch;
         private Players players;
         private Pong pong;
+        private bool returnToMenu = false;
 
         public Game1()
         {
             _graphics = new GraphicsDeviceManager(this);
-            //pantalla resolucion
-            _graphics.PreferredBackBufferWidth = 1200;
+            // Pantalla resolución
+            _graphics.PreferredBackBufferWidth = 800;
             _graphics.PreferredBackBufferHeight = 600;
+            _graphics.IsFullScreen = false;
             Content.RootDirectory = "Content";
             players = new Players();
             pong = new Pong();
@@ -36,6 +38,7 @@ namespace Juego
 
         protected override void Initialize()
         {
+            estadoActual = Juego.Menu; // Comienza en el menú
             base.Initialize();
         }
 
@@ -59,7 +62,6 @@ namespace Juego
                     bool isMovingJugador2 = players.UpdateJugador2(keyboardStateJugador2, gameTime);
                     players.Update(gameTime);
 
-                    // Si el jugador activa el modo Pong
                     if (players.PongActivo)
                     {
                         estadoActual = Juego.Pong;
@@ -69,6 +71,16 @@ namespace Juego
 
                 case Juego.Pong:
                     pong.Update(gameTime);
+
+                    if (Keyboard.GetState().IsKeyDown(Keys.P))
+                    {
+                        returnToMenu = true;
+                    }
+                    if (returnToMenu)
+                    {
+                        estadoActual = Juego.Menu;
+                        returnToMenu = false;
+                    }
                     break;
 
                 case Juego.Quemados:
@@ -94,7 +106,6 @@ namespace Juego
             switch (estadoActual)
             {
                 case Juego.Menu:
-                    // Dibuja el menu principal
                     players.Draw(_spriteBatch);
                     break;
 
@@ -109,7 +120,6 @@ namespace Juego
 
             _spriteBatch.End();
         }
-
 
         static void Main(string[] args)
         {

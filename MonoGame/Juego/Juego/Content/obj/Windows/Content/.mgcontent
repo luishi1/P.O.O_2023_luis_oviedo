@@ -4,8 +4,10 @@
   <Platform>Windows</Platform>
   <Config />
   <SourceFiles>
+    <File>C:/Users/Alejandro oviedo/Desktop/P.O.O_2023_luis_oviedo/MonoGame/Juego/Juego/Content/Sprites/PongGame/fondo.png</File>
     <File>C:/Users/Alejandro oviedo/Desktop/P.O.O_2023_luis_oviedo/MonoGame/Juego/Juego/Content/Sprites/PongGame/pedro.png</File>
     <File>C:/Users/Alejandro oviedo/Desktop/P.O.O_2023_luis_oviedo/MonoGame/Juego/Juego/Content/Sprites/PongGame/pelota.png</File>
+    <File>C:/Users/Alejandro oviedo/Desktop/P.O.O_2023_luis_oviedo/MonoGame/Juego/Juego/Content/Sprites/PongGame/powerups.png</File>
     <File>C:/Users/Alejandro oviedo/Desktop/P.O.O_2023_luis_oviedo/MonoGame/Juego/Juego/Content/Sprites/SpritePlayers/player1_down1.png</File>
     <File>C:/Users/Alejandro oviedo/Desktop/P.O.O_2023_luis_oviedo/MonoGame/Juego/Juego/Content/Sprites/SpritePlayers/player1_down2.png</File>
     <File>C:/Users/Alejandro oviedo/Desktop/P.O.O_2023_luis_oviedo/MonoGame/Juego/Juego/Content/Sprites/SpritePlayers/player1_down3.png</File>
@@ -42,6 +44,8 @@
     <File>C:/Users/Alejandro oviedo/Desktop/P.O.O_2023_luis_oviedo/MonoGame/Juego/Juego/Content/Sprites/Totems/totem.png</File>
   </SourceFiles>
   <DestFiles>
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
