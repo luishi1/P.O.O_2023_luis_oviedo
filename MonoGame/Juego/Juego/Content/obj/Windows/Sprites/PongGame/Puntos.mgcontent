@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SourceFile>C:/Users/Alejandro oviedo/Desktop/P.O.O_2023_luis_oviedo/MonoGame/Juego/Juego/Content/Sprites/PongGame/File.spritefont</SourceFile>
+  <SourceTime>2023-10-23T19:45:35.0660901-03:00</SourceTime>
+  <DestFile>C:/Users/Alejandro oviedo/Desktop/P.O.O_2023_luis_oviedo/MonoGame/Juego/Juego/Content/bin/Windows/Sprites/PongGame/Puntos.xnb</DestFile>
+  <DestTime>2023-10-23T19:45:40.3846222-03:00</DestTime>
+  <Importer>FontDescriptionImporter</Importer>
+  <ImporterTime>2018-12-08T13:35:54-03:00</ImporterTime>
+  <Processor>FontDescriptionProcessor</Processor>
+  <ProcessorTime>2018-12-08T13:35:54-03:00</ProcessorTime>
+  <Parameters>
+    <Key>PremultiplyAlpha</Key>
+    <Value>True</Value>
+  </Parameters>
+  <Parameters>
+    <Key>TextureFormat</Key>
+    <Value>Compressed</Value>
+  </Parameters>
+  <Dependencies />
+  <BuildAsset />
+  <BuildOutput />
+</PipelineBuildEvent>

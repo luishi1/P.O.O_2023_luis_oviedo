@@ -48,6 +48,7 @@ namespace Juego.Clases
         Texture2D[] circuloA = new Texture2D[4];
         Vector2[] circuloRpos = new Vector2[4];
         Vector2[] circuloApos = new Vector2[4];
+        //voy a tener que re hacer esto jaja me cago en dios
 
         //constructor players
         public Players()
@@ -114,8 +115,6 @@ namespace Juego.Clases
             }
             return sprites;
         }
-
-
 
         //UPDATES
         public bool UpdateJugador1(KeyboardState keyboardState, GameTime gameTime)
@@ -268,10 +267,12 @@ namespace Juego.Clases
             bool circuloRojo0Activo = circuloRojoActivo[0];
             bool circuloAzul0Activo = circuloAzulActivo[0];
 
-            PongActivo = circuloRojo0Activo && circuloAzul0Activo;
+            // Verificar si ambos jugadores están en la posición adecuada y "Enter" fue presionado
+            if (circuloRojo0Activo && circuloAzul0Activo && Keyboard.GetState().IsKeyDown(Keys.Enter) && !PongActivo)
+            {
+                PongActivo = true;
+            }
         }
-
-
         public void Draw(SpriteBatch spriteBatch)
         {
             //circulos
@@ -339,6 +340,22 @@ namespace Juego.Clases
                     spriteBatch.Draw(right[frameactual], position, Color.White);
                     break;
             }
+        }
+
+        public void Reset()
+        {
+            jugador1Position = new Vector2(350, 480);
+            frameactualJugador1 = 0;
+            animationTimerJugador1 = 0f;
+            currentDirectionJugador1 = Direction.Right;
+            lastDirectionJugador1 = Direction.Right;
+            lastKeyboardStateJugador1 = new KeyboardState();
+            jugador2Activo = false;
+            jugador2Position = new Vector2(400, 480);
+            frameactualJugador2 = 0;
+            animationTimerJugador2 = 0f;
+            currentDirectionJugador2 = Direction.Right;
+            lastDirectionJugador2 = Direction.Right;
         }
     }
 }

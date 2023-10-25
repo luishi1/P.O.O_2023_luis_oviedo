@@ -22,12 +22,10 @@ namespace Juego
         private SpriteBatch _spriteBatch;
         private Players players;
         private Pong pong;
-        private bool returnToMenu = false;
 
         public Game1()
         {
             _graphics = new GraphicsDeviceManager(this);
-            // Pantalla resolución
             _graphics.PreferredBackBufferWidth = 800;
             _graphics.PreferredBackBufferHeight = 600;
             _graphics.IsFullScreen = false;
@@ -38,7 +36,7 @@ namespace Juego
 
         protected override void Initialize()
         {
-            estadoActual = Juego.Menu; // Comienza en el menú
+            estadoActual = Juego.Menu; 
             base.Initialize();
         }
 
@@ -47,6 +45,11 @@ namespace Juego
             _spriteBatch = new SpriteBatch(GraphicsDevice);
             players.LoadContent(Content);
             pong.LoadContent(Content);
+        }
+
+        private void ResetMenu()
+        {
+            players.Reset(); 
         }
 
         protected override void Update(GameTime gameTime)
@@ -70,16 +73,20 @@ namespace Juego
                     break;
 
                 case Juego.Pong:
-                    pong.Update(gameTime);
-
-                    if (Keyboard.GetState().IsKeyDown(Keys.P))
-                    {
-                        returnToMenu = true;
-                    }
-                    if (returnToMenu)
+                    if (keyboardState.IsKeyDown(Keys.P))
                     {
                         estadoActual = Juego.Menu;
-                        returnToMenu = false;
+                        ResetMenu();
+                        pong.Reset();
+                        players.PongActivo = false;
+                        if (pong != null)
+                        {
+                            pong.StopMusic();
+                        }
+                    }
+                    else
+                    {
+                        pong.Update(gameTime);
                     }
                     break;
 
@@ -96,6 +103,7 @@ namespace Juego
                     break;
             }
         }
+
 
         protected override void Draw(GameTime gameTime)
         {

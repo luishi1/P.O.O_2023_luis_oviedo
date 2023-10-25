@@ -13,6 +13,13 @@
 
 #---------------------------------- Content ---------------------------------#
 
+#begin Sprites/PongGame/File.spritefont
+/importer:FontDescriptionImporter
+/processor:FontDescriptionProcessor
+/processorParam:PremultiplyAlpha=True
+/processorParam:TextureFormat=Compressed
+/build:Sprites/PongGame/File.spritefont;Sprites/PongGame/Puntos
+
 #begin Sprites/PongGame/fondo.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -49,6 +56,18 @@
 /processorParam:TextureFormat=Color
 /build:Sprites/PongGame/pelota.png
 
+#begin Sprites/PongGame/pongbip.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sprites/PongGame/pongbip.wav
+
+#begin Sprites/PongGame/pongmusic.mp3
+/importer:Mp3Importer
+/processor:SongProcessor
+/processorParam:Quality=Best
+/build:Sprites/PongGame/pongmusic.mp3
+
 #begin Sprites/PongGame/powerups.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -60,6 +79,18 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:Sprites/PongGame/powerups.png
+
+#begin Sprites/PongGame/poweup.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sprites/PongGame/poweup.wav
+
+#begin Sprites/PongGame/score.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sprites/PongGame/score.wav
 
 #begin Sprites/SpritePlayers/player1_down1.png
 /importer:TextureImporter

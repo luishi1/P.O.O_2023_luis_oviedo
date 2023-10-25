@@ -52,10 +52,10 @@
     <OutputPath>bin\x64\Release\</OutputPath>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Clases\Carrera.cs" />
     <Compile Include="Clases\Players.cs" />
     <Compile Include="Clases\Pong.cs" />
     <Compile Include="Game1.cs" />
-    <Compile Include="Jugadores.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

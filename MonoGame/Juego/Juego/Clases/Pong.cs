@@ -1,13 +1,28 @@
 ﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Audio;
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using Microsoft.Xna.Framework.Media;
 using System;
+using System.Collections.Generic;
+using System.Resources;
 
 namespace Juego.Clases
 {
+    public class PowerUp
+    {
+        public Vector2 Position;
+        public int Type;
+    }
+
     internal class Pong
     {
+        private Song backgroundMusic;
+        private bool isMusicPlaying = false;
+        private SoundEffect tuki;
+        private SoundEffect score;
+        private SoundEffect poweup;
         private Texture2D paleta1;
         private Vector2 paleta1pos;
         private Texture2D paleta2;
@@ -16,62 +31,214 @@ namespace Juego.Clases
         private Vector2 pelotapos;
         private Vector2 pelotaVelocity = new Vector2(5, 5);
         private Vector2 lastPelotaVelocity;
+        private Vector2 lastDuplicatePelotaVelocity;
         private Texture2D fondo;
         private Vector2 fondopos;
         SpriteFont spriteFont;
         private int ptsjugador1 = 0;
         private int ptsjugador2 = 0;
-        //mecanicas
+        private string ptsjugador1Text = "0";
+        private string ptsjugador2Text = "0";
+        // Mecánicas
         private Texture2D[] powerups = new Texture2D[4];
-        private bool powerUpActive = false;
-        private int currentPowerUp = -1;
-        private int powerUpSize = 30; 
-       
+        private List<PowerUp> activePowerUps = new List<PowerUp>();
+        private float powerUpTimer = 0f;
+        private Random random = new Random();
+        private bool isPowerUpActive = false;
+        private int activePowerUpType = -1;
+        private float powerUpActivationTime = 0f;
+        private Vector2 duplicatePelotaPosition;
+        private Vector2 duplicatePelotaVelocity;
+        private bool PelotaDuplicada = false;
+        private float powerUpStartTime = 0f;
+        private Vector2 originalPelotaVelocity = new Vector2(5, 5);
+        //Salida
+
         public Pong()
         {
             paleta1pos = new Vector2(20, 20);
-            paleta2pos = new Vector2(760, 20);
+            paleta2pos = new Vector2(760, 520);
             pelotapos = new Vector2(400, 300);
+        }
+
+        public void StopMusic()
+        {
+            if (isMusicPlaying)
+            {
+                MediaPlayer.Stop();
+                isMusicPlaying = false;
+            }
+        }
+        private Rectangle GetPelotaRect()
+        {
+            return new Rectangle((int)pelotapos.X, (int)pelotapos.Y, pelota.Width, pelota.Height);
         }
         public void Update(GameTime gameTime)
         {
-            //logica powerups
+            powerUpTimer += (float)gameTime.ElapsedGameTime.TotalSeconds;
+            if (powerUpTimer >= 15f)
+            {
+                int randomType = random.Next(0, powerups.Length);
+                PowerUp newPowerUp = new PowerUp
+                {
+                    Position = new Vector2(random.Next(50, 750), 0),
+                    Type = randomType
+                };
+                activePowerUps.Add(newPowerUp);
+                powerUpTimer = 0f;
+            }
 
+            if (!isMusicPlaying)
+            {
+                MediaPlayer.Play(backgroundMusic);
+                isMusicPlaying = true;
+            }
 
-            //logica de la pelota
+            foreach (PowerUp powerUp in activePowerUps)
+            {
+                powerUp.Position.Y += 2;
+
+                Rectangle powerUpRect = new Rectangle((int)powerUp.Position.X, (int)powerUp.Position.Y, 30, 30);
+
+                if (powerUpRect.Intersects(GetPelotaRect()))
+                {
+                    switch (powerUp.Type)
+                    {
+                        case 0: // Fuego 
+                            if (!isPowerUpActive)
+                            {
+                                originalPelotaVelocity = pelotaVelocity;
+                                pelotaVelocity *= 2;
+                                isPowerUpActive = true;
+                                activePowerUpType = powerUp.Type;
+                                powerUpActivationTime = (float)gameTime.TotalGameTime.TotalSeconds;
+                                powerUpStartTime = (float)gameTime.TotalGameTime.TotalSeconds;
+                            }
+                            break;
+
+                        case 1: // Lento 
+                            if (!isPowerUpActive)
+                            {
+                                originalPelotaVelocity = pelotaVelocity;
+                                pelotaVelocity /= 2;
+                                isPowerUpActive = true;
+                                activePowerUpType = powerUp.Type;
+                                powerUpActivationTime = (float)gameTime.TotalGameTime.TotalSeconds;
+                                powerUpStartTime = (float)gameTime.TotalGameTime.TotalSeconds;
+                            }
+                            break;
+
+                        case 2: // Iman 
+                            if (!isPowerUpActive)
+                            {
+                                originalPelotaVelocity = pelotaVelocity;
+                                pelotaVelocity = -pelotaVelocity;
+                                isPowerUpActive = true;
+                                activePowerUpType = powerUp.Type;
+                                powerUpActivationTime = (float)gameTime.TotalGameTime.TotalSeconds;
+                                powerUpStartTime = (float)gameTime.TotalGameTime.TotalSeconds;
+                            }
+                            break;
+
+                        case 3: // Duplicar
+                            if (!isPowerUpActive)
+                            {
+                                originalPelotaVelocity = pelotaVelocity;
+                                isPowerUpActive = true;
+                                activePowerUpType = powerUp.Type;
+                                powerUpActivationTime = (float)gameTime.TotalGameTime.TotalSeconds;
+                                PelotaDuplicada = true;
+                                duplicatePelotaPosition = new Vector2(pelotapos.X, pelotapos.Y);
+                                duplicatePelotaVelocity = new Vector2(-pelotaVelocity.X, pelotaVelocity.Y);
+                                powerUpStartTime = (float)gameTime.TotalGameTime.TotalSeconds;
+                            }
+                            break;
+                        default:
+                            break;
+                    }
+                    poweup.Play();
+                    activePowerUps.Remove(powerUp);
+                    break;
+                }
+            }
+
+            if (isPowerUpActive && (gameTime.TotalGameTime.TotalSeconds - powerUpActivationTime >= 15))
+            {
+                pelotaVelocity = originalPelotaVelocity;
+                isPowerUpActive = false;
+                activePowerUpType = -1;
+                PelotaDuplicada = false;
+            }
+            activePowerUps.RemoveAll(powerUp => powerUp.Position.Y > 600);
+
             Vector2 oldPelotapos = pelotapos;
             pelotapos += pelotaVelocity;
             if (pelotapos.Y < 0 || pelotapos.Y > 600)
             {
                 pelotaVelocity.Y *= -1;
             }
-
-            if (pelotapos.X < paleta1pos.X + paleta1.Width && pelotapos.X > paleta1pos.X && pelotapos.Y > paleta1pos.Y && pelotapos.Y < paleta1pos.Y + paleta1.Height)
+            if (pelotapos.X < paleta1pos.X + paleta1.Width && pelotapos.X + pelota.Width > paleta1pos.X && pelotapos.Y < paleta1pos.Y + paleta1.Height && pelotapos.Y + pelota.Height > paleta1pos.Y)
             {
                 pelotapos = oldPelotapos;
-                pelotaVelocity.X *= -1;
+                pelotaVelocity.X = Math.Abs(pelotaVelocity.X);
+                tuki.Play();
             }
-            if (pelotapos.X + pelota.Width > paleta2pos.X && pelotapos.X + pelota.Width < paleta2pos.X + paleta2.Width && pelotapos.Y > paleta2pos.Y && pelotapos.Y < paleta2pos.Y + paleta2.Height)
+            if (pelotapos.X < paleta2pos.X + paleta2.Width && pelotapos.X + pelota.Width > paleta2pos.X && pelotapos.Y < paleta2pos.Y + paleta2.Height && pelotapos.Y + pelota.Height > paleta2pos.Y)
             {
                 pelotapos = oldPelotapos;
-                pelotaVelocity.X *= -1;
+                pelotaVelocity.X = -Math.Abs(pelotaVelocity.X);
+                tuki.Play();
             }
-
             if (pelotapos.X < 0)
             {
                 ptsjugador2++;
-                lastPelotaVelocity = pelotaVelocity;
-                ReiniciarPelota();
+                ReinicioPelota(ref pelotapos, ref pelotaVelocity, lastPelotaVelocity);
+                score.Play();
             }
-
             if (pelotapos.X > 800)
             {
                 ptsjugador1++;
-                lastPelotaVelocity = pelotaVelocity;
-                ReiniciarPelota();
+                ReinicioPelota(ref pelotapos, ref pelotaVelocity, lastPelotaVelocity);
+                score.Play();
             }
-
-            //movimiento paletas aka pedro
+            if (PelotaDuplicada)
+            {
+                Vector2 oldDuplicatePelotaPosition = duplicatePelotaPosition;
+                duplicatePelotaPosition += duplicatePelotaVelocity;
+                if (duplicatePelotaPosition.Y < 0 || duplicatePelotaPosition.Y > 600)
+                {
+                    duplicatePelotaVelocity.Y *= -1;
+                }
+                if (duplicatePelotaPosition.X < paleta1pos.X + paleta1.Width && duplicatePelotaPosition.X + pelota.Width > paleta1pos.X &&
+                    duplicatePelotaPosition.Y < paleta1pos.Y + paleta1.Height && duplicatePelotaPosition.Y + pelota.Height > paleta1pos.Y)
+                {
+                    duplicatePelotaPosition = oldDuplicatePelotaPosition;
+                    duplicatePelotaVelocity.X = Math.Abs(duplicatePelotaVelocity.X);
+                    tuki.Play();
+                }
+                if (duplicatePelotaPosition.X < paleta2pos.X + paleta2.Width && duplicatePelotaPosition.X + pelota.Width > paleta2pos.X &&
+                    duplicatePelotaPosition.Y < paleta2pos.Y + paleta2.Height && duplicatePelotaPosition.Y + pelota.Height > paleta2pos.Y)
+                {
+                    duplicatePelotaPosition = oldDuplicatePelotaPosition;
+                    duplicatePelotaVelocity.X = -Math.Abs(duplicatePelotaVelocity.X);
+                    tuki.Play();
+                }
+                if (duplicatePelotaPosition.X < 0)
+                {
+                    ptsjugador2++;
+                    lastDuplicatePelotaVelocity = duplicatePelotaVelocity;
+                    ReinicioPelota(ref duplicatePelotaPosition, ref duplicatePelotaVelocity, lastDuplicatePelotaVelocity);
+                    score.Play();
+                }
+                if (duplicatePelotaPosition.X > 800)
+                {
+                    ptsjugador1++;
+                    lastDuplicatePelotaVelocity = duplicatePelotaVelocity;
+                    ReinicioPelota(ref duplicatePelotaPosition, ref duplicatePelotaVelocity, lastDuplicatePelotaVelocity);
+                    score.Play();
+                }
+            }
+            //Pedros
             KeyboardState keyboardState = Keyboard.GetState();
             if (keyboardState.IsKeyDown(Keys.W))
             {
@@ -91,66 +258,69 @@ namespace Juego.Clases
             }
             paleta1pos.Y = MathHelper.Clamp(paleta1pos.Y, 0, 600 - paleta1.Height);
             paleta2pos.Y = MathHelper.Clamp(paleta2pos.Y, 0, 600 - paleta2.Height);
-        }
 
-        private void ReiniciarPelota()
+            ptsjugador1Text =  ptsjugador1.ToString();
+            ptsjugador2Text =  ptsjugador2.ToString();
+        }
+        private void ReinicioPelota(ref Vector2 posicion, ref Vector2 velocidad, Vector2 velocidadantigua)
         {
-            pelotapos = new Vector2(400, 300);
-            pelotaVelocity = lastPelotaVelocity;
+            posicion = new Vector2(400, 300);
+            velocidad = velocidadantigua;
         }
-
-
         public void LoadContent(ContentManager content)
         {
+            backgroundMusic = content.Load<Song>("Sprites/PongGame/pongmusic");
+            tuki = content.Load<SoundEffect>("Sprites/PongGame/pongbip");
+            poweup = content.Load<SoundEffect>("Sprites/PongGame/poweup");
+            score = content.Load<SoundEffect>("Sprites/PongGame/score");
             paleta1 = content.Load<Texture2D>("Sprites/PongGame/pedro");
             paleta2 = content.Load<Texture2D>("Sprites/PongGame/pedro");
             pelota = content.Load<Texture2D>("Sprites/PongGame/pelota");
             fondo = content.Load<Texture2D>("Sprites/PongGame/fondo");
-            //spriteFont = content.Load<SpriteFont>("");
-
-            //powers
+            spriteFont = content.Load<SpriteFont>("Sprites/PongGame/Puntos");
             for (int i = 0; i < powerups.Length; i++)
             {
                 powerups[i] = content.Load<Texture2D>("Sprites/PongGame/powerups");
             }
         }
-
         public void Draw(SpriteBatch spriteBatch)
         {
             spriteBatch.Draw(fondo, fondopos, Color.White);
             spriteBatch.Draw(paleta1, paleta1pos, Color.White);
             spriteBatch.Draw(paleta2, paleta2pos, Color.White);
             spriteBatch.Draw(pelota, pelotapos, Color.White);
-            //spriteBatch.DrawString(spriteFont, "Jugador 1: " + ptsjugador1, new Vector2(20, 20), Color.White);
-            //spriteBatch.DrawString(spriteFont, "Jugador 2: " + ptsjugador2, new Vector2(700, 20), Color.White);
+            spriteBatch.DrawString(spriteFont, ptsjugador1Text, new Vector2(240, 15), Color.White);
+            spriteBatch.DrawString(spriteFont, ptsjugador2Text, new Vector2(560, 15), Color.White);
 
-            //rectangle
-            Rectangle powerUpRectangle;
-
-            switch (currentPowerUp)
+            foreach (PowerUp powerUp in activePowerUps)
             {
-                case 0: // Fuego
-                    powerUpRectangle = new Rectangle(0, 0, 10*3, 10*3);
-                    break;
-                case 1: // Lento
-                    powerUpRectangle = new Rectangle(10*3, 0, 10*3, 10*3);
-                    break;
-                case 2: // Iman
-                    powerUpRectangle = new Rectangle(20*3, 0, 10*3, 10*3);
-                    break;
-                case 3: // X2
-                    powerUpRectangle = new Rectangle(30*3, 0, 10*3, 10*3);
-                    break;
-                default:
-                    powerUpRectangle = Rectangle.Empty; 
-                    break;
+                Rectangle sourceRect = new Rectangle(powerUp.Type * 30, 0, 30, 30);
+                spriteBatch.Draw(powerups[powerUp.Type], powerUp.Position, sourceRect, Color.White);
             }
-            if (powerUpActive)
+            if (PelotaDuplicada)
             {
-                spriteBatch.Draw(powerups[currentPowerUp], new Vector2(400, 300), powerUpRectangle, Color.White);
+                spriteBatch.Draw(pelota, duplicatePelotaPosition, Color.White);
             }
         }
 
-
+        public void Reset()
+        {
+            paleta1pos = new Vector2(20, 20);
+            paleta2pos = new Vector2(760, 520);
+            pelotapos = new Vector2(400, 300);
+            ptsjugador1 = 0;
+            ptsjugador2 = 0;
+            ptsjugador1Text = "0";
+            ptsjugador2Text = "0";
+            activePowerUps.Clear();
+            powerUpTimer = 0f;
+            isPowerUpActive = false;
+            activePowerUpType = -1;
+            pelotaVelocity = new Vector2(5, 5);
+            lastPelotaVelocity = new Vector2(5, 5);
+            lastDuplicatePelotaVelocity = new Vector2(5, 5);
+            PelotaDuplicada = false;
+            originalPelotaVelocity = new Vector2(5, 5);
+        }
     }
 }

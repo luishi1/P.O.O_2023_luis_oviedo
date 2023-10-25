@@ -61,3 +61,9 @@ C:\Users\Alejandro oviedo\Desktop\P.O.O_2023_luis_oviedo\MonoGame\Juego\Juego\bi
 C:\Users\Alejandro oviedo\Desktop\P.O.O_2023_luis_oviedo\MonoGame\Juego\Juego\bin\x64\Debug\Content\Sprites\PongGame\pelota.xnb
 C:\Users\Alejandro oviedo\Desktop\P.O.O_2023_luis_oviedo\MonoGame\Juego\Juego\bin\x64\Debug\Content\Sprites\PongGame\fondo.xnb
 C:\Users\Alejandro oviedo\Desktop\P.O.O_2023_luis_oviedo\MonoGame\Juego\Juego\bin\x64\Debug\Content\Sprites\PongGame\powerups.xnb
+C:\Users\Alejandro oviedo\Desktop\P.O.O_2023_luis_oviedo\MonoGame\Juego\Juego\bin\x64\Debug\Content\Sprites\PongGame\Puntos.xnb
+C:\Users\Alejandro oviedo\Desktop\P.O.O_2023_luis_oviedo\MonoGame\Juego\Juego\bin\x64\Debug\Content\Sprites\PongGame\pongbip.xnb
+C:\Users\Alejandro oviedo\Desktop\P.O.O_2023_luis_oviedo\MonoGame\Juego\Juego\bin\x64\Debug\Content\Sprites\PongGame\pongmusic.xnb
+C:\Users\Alejandro oviedo\Desktop\P.O.O_2023_luis_oviedo\MonoGame\Juego\Juego\bin\x64\Debug\Content\Sprites\PongGame\pongmusic.wma
+C:\Users\Alejandro oviedo\Desktop\P.O.O_2023_luis_oviedo\MonoGame\Juego\Juego\bin\x64\Debug\Content\Sprites\PongGame\score.xnb
+C:\Users\Alejandro oviedo\Desktop\P.O.O_2023_luis_oviedo\MonoGame\Juego\Juego\bin\x64\Debug\Content\Sprites\PongGame\poweup.xnb
