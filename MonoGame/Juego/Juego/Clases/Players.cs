@@ -221,6 +221,7 @@ namespace Juego.Clases
         bool[] circuloRojoActivo = new bool[4];
         bool[] circuloAzulActivo = new bool[4];
         public bool PongActivo = false;
+        public bool CarreraActiva = false;
         public void Update(GameTime gameTime)
         {
             Rectangle[] totemRects = new Rectangle[4];
@@ -266,11 +267,17 @@ namespace Juego.Clases
 
             bool circuloRojo0Activo = circuloRojoActivo[0];
             bool circuloAzul0Activo = circuloAzulActivo[0];
+            bool circuloRojo1Activo = circuloRojoActivo[1];
+            bool circuloAzul1Activo = circuloAzulActivo[1];
 
             // Verificar si ambos jugadores están en la posición adecuada y "Enter" fue presionado
             if (circuloRojo0Activo && circuloAzul0Activo && Keyboard.GetState().IsKeyDown(Keys.Enter) && !PongActivo)
             {
                 PongActivo = true;
+            }
+            if (circuloRojo1Activo && circuloAzul1Activo && Keyboard.GetState().IsKeyDown(Keys.Enter) && !PongActivo)
+            {
+                CarreraActiva = true;
             }
         }
         public void Draw(SpriteBatch spriteBatch)

@@ -22,6 +22,7 @@ namespace Juego
         private SpriteBatch _spriteBatch;
         private Players players;
         private Pong pong;
+        private Carrera carrera;
 
         public Game1()
         {
@@ -32,6 +33,7 @@ namespace Juego
             Content.RootDirectory = "Content";
             players = new Players();
             pong = new Pong();
+            carrera = new Carrera();
         }
 
         protected override void Initialize()
@@ -70,6 +72,11 @@ namespace Juego
                         estadoActual = Juego.Pong;
                         pong.LoadContent(Content);
                     }
+                    if (players.CarreraActiva)
+                    {
+                        estadoActual = Juego.Carrera;
+                        carrera.LoadContent(Content);
+                    }
                     break;
 
                 case Juego.Pong:
@@ -94,6 +101,15 @@ namespace Juego
                     break;
 
                 case Juego.Carrera:
+                    if (keyboardState.IsKeyDown(Keys.P))
+                    {
+                        estadoActual = Juego.Menu;
+                        //volver a menu
+                    }
+                    else
+                    {
+                        carrera.Update(gameTime);
+                    }
                     break;
 
                 case Juego.BudokaiBrawl:
@@ -122,6 +138,10 @@ namespace Juego
                     pong.Draw(_spriteBatch);
                     break;
 
+                case Juego.Carrera:
+                    GraphicsDevice.Clear(Color.Black);
+                    carrera.Draw(_spriteBatch);
+                    break;
                 default:
                     break;
             }

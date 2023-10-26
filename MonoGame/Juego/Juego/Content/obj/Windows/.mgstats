@@ -1,2 +1,2 @@
 Source File,Dest File,Processor Type,Content Type,Source File Size,Dest File Size,Build Seconds
-"C:/Users/Alejandro oviedo/Desktop/P.O.O_2023_luis_oviedo/MonoGame/Juego/Juego/Content/Sprites/PongGame/File.spritefont","C:/Users/Alejandro oviedo/Desktop/P.O.O_2023_luis_oviedo/MonoGame/Juego/Juego/Content/bin/Windows/Sprites/PongGame/Puntos.xnb","FontDescriptionProcessor","SpriteFontContent",2005,136209,0,6563871
+"C:/Users/Alejandro oviedo/Desktop/P.O.O_2023_luis_oviedo/MonoGame/Juego/Juego/Content/Sprites/PongGame/powerups.png","C:/Users/Alejandro oviedo/Desktop/P.O.O_2023_luis_oviedo/MonoGame/Juego/Juego/Content/bin/Windows/Sprites/PongGame/powerups.xnb","TextureProcessor","Texture2DContent",2512,28885,0,2374189
