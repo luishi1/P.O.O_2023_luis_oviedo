@@ -32,18 +32,20 @@ namespace Juego.Clases
         }
     }
 
-    internal class Carrera
+internal class Carrera
     {
         private Texture2D Titulo;
         private Texture2D fondo;
         private Texture2D[] roster = new Texture2D[17];
         private int opcionjugador1 = 0;
-        private int opcionjugador2 = 0;
+        private int opcionjugador2 = 1;
         Autos auto;
         Autos auto2;
         KeyboardState keyboardStatePlayer;
         float tiempoDeCambio = 0.15f;
         float tiempoTranscurrido = 0f;
+        bool Seleccionado = false;
+        bool Seleccionado2 = false;
 
         public void Update(GameTime gameTime, KeyboardState keyboardState)
         {
@@ -78,7 +80,42 @@ namespace Juego.Clases
                 {
                     Console.WriteLine("Opción de jugador 1 no válida");
                 }
-                tiempoTranscurrido = 0f; 
+
+                if (opcionjugador2 >= 0 && opcionjugador2 <= 8)
+                {
+                    if (keyboardStatePlayer.IsKeyDown(Keys.Up) && opcionjugador2 >= 3)
+                    {
+                        opcionjugador2 -= 3;
+                    }
+                    else if (keyboardStatePlayer.IsKeyDown(Keys.Down) && opcionjugador2 <= 5)
+                    {
+                        opcionjugador2 += 3;
+                    }
+                    else if (keyboardStatePlayer.IsKeyDown(Keys.Left) && opcionjugador2 % 3 > 0)
+                    {
+                        opcionjugador2--;
+                    }
+                    else if (keyboardStatePlayer.IsKeyDown(Keys.Right) && opcionjugador2 % 3 < 2)
+                    {
+                        opcionjugador2++;
+                    }
+                }
+                else
+                {
+                    Console.WriteLine("Opción de jugador 2 no válida");
+                }
+                tiempoTranscurrido = 0f;
+
+                if (keyboardStatePlayer.IsKeyDown(Keys.Y) && opcionjugador1 >= 0 && opcionjugador1 <= 8 && !Seleccionado)
+                {
+                    Seleccionado = true;
+                    Console.WriteLine("seleccionado");
+                }
+                if (keyboardStatePlayer.IsKeyDown(Keys.O) && opcionjugador2 >= 0 && opcionjugador2 <= 8 && !Seleccionado2)
+                {
+                    Seleccionado2 = true;
+                }
+
             }
         }
 
@@ -119,13 +156,22 @@ namespace Juego.Clases
             int espaciadoHorizontal = 2;
             int fila = 0;
             int columna = 0;
+            //dibujamos los autos
             for (int i = 0; i < sinelegir.Count; i++)
             {
                 Vector2 posicionAuto = new Vector2(columna * (45 * 3 + espaciadoHorizontal), fila * (45 * 3 + espaciadoVertical) + 100);
 
-                if (i == opcionjugador1)
+                if (i == opcionjugador2 && i == opcionjugador1)
+                {
+                    spriteBatch.Draw(roster[i], posicionAuto, sinelegir[i], Color.Violet);
+                }
+                else if (i == opcionjugador1)
                 {
                     spriteBatch.Draw(roster[i], posicionAuto, sinelegir[i], Color.Red);
+                }
+                else if (i == opcionjugador2)
+                {
+                    spriteBatch.Draw(roster[i], posicionAuto, sinelegir[i], Color.Blue);
                 }
                 else
                 {
@@ -138,6 +184,7 @@ namespace Juego.Clases
                     fila++;
                 }
             }
+
         }
     }
 
