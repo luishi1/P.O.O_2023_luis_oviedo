@@ -108,7 +108,7 @@ namespace Juego
                     }
                     else
                     {
-                        carrera.Update(gameTime);
+                        carrera.Update(gameTime, Keyboard.GetState());
                     }
                     break;
 

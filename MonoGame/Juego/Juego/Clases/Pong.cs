@@ -137,8 +137,7 @@ namespace Juego.Clases
                         case 2: // Cambio de Dirección en X / Iman
                             if (!isPowerUpActive)
                             {
-                                originalPelotaVelocity = pelotaVelocity;
-                                pelotaVelocity = -pelotaVelocity;
+                                pelotaVelocity.X= -pelotaVelocity.X;
                             }
                             break;
 
@@ -213,11 +212,11 @@ namespace Juego.Clases
             {
                 if (ultimaPaletaTocadaPorPaleta1)
                 {
-                    pelotaVelocity = -originalPelotaVelocity;
+                    pelotaVelocity = originalPelotaVelocity;
                 }
                 else
                 {
-                    pelotaVelocity = originalPelotaVelocity;
+                    pelotaVelocity = -originalPelotaVelocity;
                 }
                 isPowerUpActive = false;
                 activePowerUpType = -1;

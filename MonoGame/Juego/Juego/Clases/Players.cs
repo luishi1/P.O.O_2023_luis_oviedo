@@ -63,16 +63,16 @@ namespace Juego.Clases
             //CIRCULOS
 
             //Azul
-            circuloApos[0] = new Vector2(30, 370);
-            circuloApos[1] = new Vector2(150, 220);
-            circuloApos[2] = new Vector2(570, 370);
-            circuloApos[3] = new Vector2(450, 220);
+            circuloApos[0] = new Vector2(155, 370);
+            circuloApos[1] = new Vector2(275, 220);
+            circuloApos[2] = new Vector2(695, 370);
+            circuloApos[3] = new Vector2(575, 220);
 
             //Rojos
-            circuloRpos[0] = new Vector2(155, 370);
-            circuloRpos[1] = new Vector2(275, 220);
-            circuloRpos[2] = new Vector2(695, 370);
-            circuloRpos[3] = new Vector2(575, 220);
+            circuloRpos[0] = new Vector2(30, 370);
+            circuloRpos[1] = new Vector2(150, 220);
+            circuloRpos[2] = new Vector2(570, 370);
+            circuloRpos[3] = new Vector2(450, 220);
         }
 
         public void LoadContent(ContentManager content)
@@ -121,25 +121,25 @@ namespace Juego.Clases
         {
             bool isMoving = false;
 
-            if (keyboardState.IsKeyDown(Keys.Up))
+            if (keyboardState.IsKeyDown(Keys.W))
             {
                 currentDirectionJugador1 = Direction.Up;
                 jugador1Position.Y -= 2;
                 isMoving = true;
             }
-            else if (keyboardState.IsKeyDown(Keys.Down))
+            else if (keyboardState.IsKeyDown(Keys.S))
             {
                 currentDirectionJugador1 = Direction.Down;
                 jugador1Position.Y += 2;
                 isMoving = true;
             }
-            else if (keyboardState.IsKeyDown(Keys.Left))
+            else if (keyboardState.IsKeyDown(Keys.A))
             {
                 currentDirectionJugador1 = Direction.Left;
                 jugador1Position.X -= 2;
                 isMoving = true;
             }
-            else if (keyboardState.IsKeyDown(Keys.Right))
+            else if (keyboardState.IsKeyDown(Keys.D))
             {
                 currentDirectionJugador1 = Direction.Right;
                 jugador1Position.X += 2;
@@ -174,25 +174,25 @@ namespace Juego.Clases
         {
             bool isMoving = false;
 
-            if (keyboardState.IsKeyDown(Keys.W))
+            if (keyboardState.IsKeyDown(Keys.Up))
             {
                 currentDirectionJugador2 = Direction.Up;
                 jugador2Position.Y -= 2;
                 isMoving = true;
             }
-            else if (keyboardState.IsKeyDown(Keys.S))
+            else if (keyboardState.IsKeyDown(Keys.Down))
             {
                 currentDirectionJugador2 = Direction.Down;
                 jugador2Position.Y += 2;
                 isMoving = true;
             }
-            else if (keyboardState.IsKeyDown(Keys.A))
+            else if (keyboardState.IsKeyDown(Keys.Left))
             {
                 currentDirectionJugador2 = Direction.Left;
                 jugador2Position.X -= 2;
                 isMoving = true;
             }
-            else if (keyboardState.IsKeyDown(Keys.D))
+            else if (keyboardState.IsKeyDown(Keys.Right))
             {
                 currentDirectionJugador2 = Direction.Right;
                 jugador2Position.X += 2;

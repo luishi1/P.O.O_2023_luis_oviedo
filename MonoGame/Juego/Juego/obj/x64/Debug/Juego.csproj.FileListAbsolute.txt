@@ -68,3 +68,6 @@ C:\Users\Alejandro oviedo\Desktop\P.O.O_2023_luis_oviedo\MonoGame\Juego\Juego\bi
 C:\Users\Alejandro oviedo\Desktop\P.O.O_2023_luis_oviedo\MonoGame\Juego\Juego\bin\x64\Debug\Content\Sprites\PongGame\score.xnb
 C:\Users\Alejandro oviedo\Desktop\P.O.O_2023_luis_oviedo\MonoGame\Juego\Juego\bin\x64\Debug\Content\Sprites\PongGame\poweup.xnb
 C:\Users\Alejandro oviedo\Desktop\P.O.O_2023_luis_oviedo\MonoGame\Juego\Juego\bin\x64\Debug\Content\Sprites\Carrera\autos.xnb
+C:\Users\Alejandro oviedo\Desktop\P.O.O_2023_luis_oviedo\MonoGame\Juego\Juego\bin\x64\Debug\Content\Sprites\Carrera\roster_auto.xnb
+C:\Users\Alejandro oviedo\Desktop\P.O.O_2023_luis_oviedo\MonoGame\Juego\Juego\bin\x64\Debug\Content\Sprites\Carrera\Titulo.xnb
+C:\Users\Alejandro oviedo\Desktop\P.O.O_2023_luis_oviedo\MonoGame\Juego\Juego\bin\x64\Debug\Content\Sprites\Carrera\fondo_menu.xnb
