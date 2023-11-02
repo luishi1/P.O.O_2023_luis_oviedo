@@ -33,7 +33,7 @@ namespace Juego
             Content.RootDirectory = "Content";
             players = new Players();
             pong = new Pong();
-            carrera = new Carrera();
+            carrera = new Carrera(GraphicsDevice);
         }
 
         protected override void Initialize()
@@ -108,7 +108,7 @@ namespace Juego
                     }
                     else
                     {
-                        carrera.Update(gameTime, Keyboard.GetState());
+                        carrera.Update(gameTime, Keyboard.GetState() , GraphicsDevice);
                     }
                     break;
 

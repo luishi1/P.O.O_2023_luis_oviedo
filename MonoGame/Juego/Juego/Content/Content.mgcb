@@ -25,17 +25,12 @@
 /processorParam:TextureFormat=Color
 /build:Sprites/Carrera/autos.png
 
-#begin Sprites/Carrera/autos.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
+#begin Sprites/Carrera/File.spritefont
+/importer:FontDescriptionImporter
+/processor:FontDescriptionProcessor
 /processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:Sprites/Carrera/autos.png
+/processorParam:TextureFormat=Compressed
+/build:Sprites/Carrera/File.spritefont;Sprites/Carrera/textos
 
 #begin Sprites/Carrera/fondo_menu.png
 /importer:TextureImporter
@@ -48,6 +43,18 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:Sprites/Carrera/fondo_menu.png
+
+#begin Sprites/Carrera/iniciar.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Sprites/Carrera/iniciar.png
 
 #begin Sprites/Carrera/roster_auto.png
 /importer:TextureImporter

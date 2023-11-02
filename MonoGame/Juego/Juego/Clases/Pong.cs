@@ -58,7 +58,9 @@ namespace Juego.Clases
         private bool Pelotavisible = true;
         private bool isInvisiblePowerUpActive = false;
         private float invisiblePowerUpActivationTime = 0f;
-
+        private float invisibilityDuration = 6.0f; 
+        private bool velocidadaumentada = false;
+        private bool velocidaddisminuida = false;
         public Pong()
         {
             paleta1pos = new Vector2(20, 20);
@@ -86,7 +88,7 @@ namespace Juego.Clases
                 int randomType = random.Next(0, powerups.Length);
                 PowerUp newPowerUp = new PowerUp
                 {
-                    Position = new Vector2(random.Next(50, 750), 0),
+                    Position = new Vector2(random.Next(50, 750), random.Next(50, 550)),
                     Type = randomType
                 };
                 activePowerUps.Add(newPowerUp);
@@ -102,8 +104,6 @@ namespace Juego.Clases
 
             foreach (PowerUp powerUp in activePowerUps)
             {
-                powerUp.Position.Y += 2;
-
                 Rectangle powerUpRect = new Rectangle((int)powerUp.Position.X, (int)powerUp.Position.Y, 30, 30);
 
                 if (powerUpRect.Intersects(GetPelotaRect()))
@@ -113,8 +113,8 @@ namespace Juego.Clases
                         case 0: // Fuego 
                             if (!isPowerUpActive)
                             {
-                                originalPelotaVelocity = pelotaVelocity; 
                                 pelotaVelocity *= 2;
+                                velocidadaumentada = true;
                                 isPowerUpActive = true;
                                 activePowerUpType = powerUp.Type;
                                 powerUpActivationTime = (float)gameTime.TotalGameTime.TotalSeconds;
@@ -125,8 +125,8 @@ namespace Juego.Clases
                         case 1: // Lento 
                             if (!isPowerUpActive)
                             {
-                                originalPelotaVelocity = pelotaVelocity; 
                                 pelotaVelocity /= 2;
+                                velocidaddisminuida = true;
                                 isPowerUpActive = true;
                                 activePowerUpType = powerUp.Type;
                                 powerUpActivationTime = (float)gameTime.TotalGameTime.TotalSeconds;
@@ -144,7 +144,6 @@ namespace Juego.Clases
                         case 3: // Duplicar
                             if (!isPowerUpActive)
                             {
-                                originalPelotaVelocity = pelotaVelocity;
                                 isPowerUpActive = true;
                                 activePowerUpType = powerUp.Type;
                                 powerUpActivationTime = (float)gameTime.TotalGameTime.TotalSeconds;
@@ -190,7 +189,7 @@ namespace Juego.Clases
                                 }
                             }
                             break;
-                        case 7: // invisible
+                        case 7: // Invisible
                             if (!isInvisiblePowerUpActive)
                             {
                                 originalPelotaVelocity = pelotaVelocity;
@@ -208,24 +207,31 @@ namespace Juego.Clases
                 }
             }
 
-            if (isPowerUpActive && (gameTime.TotalGameTime.TotalSeconds - powerUpActivationTime >= 15))
+            if (isPowerUpActive && (gameTime.TotalGameTime.TotalSeconds - powerUpActivationTime >= 2))
             {
-                if (ultimaPaletaTocadaPorPaleta1)
+                if (velocidadaumentada)
                 {
-                    pelotaVelocity = originalPelotaVelocity;
+                    pelotaVelocity /= 2;
+                    velocidadaumentada = false;
                 }
-                else
+                if (velocidaddisminuida)
                 {
-                    pelotaVelocity = -originalPelotaVelocity;
+                    pelotaVelocity *= 2;
+                    velocidaddisminuida = false;
                 }
                 isPowerUpActive = false;
                 activePowerUpType = -1;
                 PelotaDuplicada = false;
                 Pelotavisible = true;
             }
-            if (isInvisiblePowerUpActive && (gameTime.TotalGameTime.TotalSeconds - invisiblePowerUpActivationTime >= 6))
+
+            if (isInvisiblePowerUpActive)
             {
-                Pelotavisible = true;
+                if (gameTime.TotalGameTime.TotalSeconds - invisiblePowerUpActivationTime >= invisibilityDuration)
+                {
+                    isInvisiblePowerUpActive = false;
+                    Pelotavisible = true;
+                }
             }
             activePowerUps.RemoveAll(powerUp => powerUp.Position.Y > 600);
 
@@ -235,20 +241,23 @@ namespace Juego.Clases
             {
                 pelotaVelocity.Y *= -1;
             }
-            if (pelotapos.X < paleta1pos.X + paleta1.Width && pelotapos.X + pelota.Width > paleta1pos.X && pelotapos.Y < paleta1pos.Y + paleta1.Height && pelotapos.Y + pelota.Height > paleta1pos.Y)
+            if (pelotapos.X < paleta1pos.X + paleta1.Width && pelotapos.X + pelota.Width > paleta1pos.X &&
+                pelotapos.Y < paleta1pos.Y + paleta1.Height && pelotapos.Y + pelota.Height > paleta1pos.Y)
             {
-                pelotapos = oldPelotapos;
+                pelotapos = new Vector2(paleta1pos.X + paleta1.Width, pelotapos.Y);
                 pelotaVelocity.X = Math.Abs(pelotaVelocity.X);
                 ultimaPaletaTocadaPorPaleta1 = true;
                 tuki.Play();
             }
-            if (pelotapos.X < paleta2pos.X + paleta2.Width && pelotapos.X + pelota.Width > paleta2pos.X && pelotapos.Y < paleta2pos.Y + paleta2.Height && pelotapos.Y + pelota.Height > paleta2pos.Y)
+            if (pelotapos.X < paleta2pos.X + paleta2.Width && pelotapos.X + pelota.Width > paleta2pos.X &&
+                pelotapos.Y < paleta2pos.Y + paleta2.Height && pelotapos.Y + pelota.Height > paleta2pos.Y)
             {
-                pelotapos = oldPelotapos;
+                pelotapos = new Vector2(paleta2pos.X - pelota.Width, pelotapos.Y);
                 pelotaVelocity.X = -Math.Abs(pelotaVelocity.X);
                 ultimaPaletaTocadaPorPaleta1 = false;
                 tuki.Play();
             }
+
             if (pelotapos.X < 0)
             {
                 ptsjugador2++;
