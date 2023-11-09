@@ -23,18 +23,27 @@ namespace Juego.Clases
         bool Seleccionado = false;
         bool Seleccionado2 = false;
         bool IniciarCarrera = false;
-
-        private Vector2 posicionAuto = new Vector2(20, 10); 
         private GraphicsDevice graphicsDevice;
 
         //movimiento auto
         //por auto
-        private bool rotando = false;
-        private float rotacionManual = 0f; 
+        private Vector2 posicionAuto;
+        private Vector2 posicionAuto2;
+        Vector2 spriteorigin;
+        Vector2 spriteorigin2;
+        Rectangle spriteRectangle;
+        Rectangle spriteRectangle2;
+        float rotation;
+        float rotation2;
+        Vector2 spriteVelocity;
+        Vector2 spriteVelocity2;
+        const float tangentialVelocity = 5f;
+        float friction = 0.1f;
 
         public Carrera(GraphicsDevice graphicsDevice)
         {
             this.graphicsDevice = graphicsDevice;
+            posicionAuto = new Vector2(400,300);
         }
 
         public void Update(GameTime gameTime, KeyboardState keyboardState , GraphicsDevice graphicsDevice)
@@ -94,7 +103,7 @@ namespace Juego.Clases
                         tiempoTranscurrido = 0f;
                     }
                 }
-                if (opcionjugador2 >= 0 && opcionjugador2 <= 8)
+                if (opcionjugador2 >= 0 && opcionjugador2 <= 8 && !Seleccionado2)
                 {
                     if (keyboardStatePlayer.IsKeyDown(Keys.Up) && opcionjugador2 >= 3)
                     {
@@ -126,34 +135,42 @@ namespace Juego.Clases
             }
             if (IniciarCarrera)
             {
-                Vector2 velocidad = Vector2.Zero;
+                //Auto 1
+                posicionAuto = spriteVelocity + posicionAuto;
+                spriteRectangle = new Rectangle((int)posicionAuto.X, (int)posicionAuto.Y, autos[opcionjugador1].Width, autos[opcionjugador1].Height);
+                if (Keyboard.GetState().IsKeyDown(Keys.D)) rotation += 0.1f;
+                if (Keyboard.GetState().IsKeyDown(Keys.A)) rotation -= 0.1f;
+                if (Keyboard.GetState().IsKeyDown(Keys.W))
+                {
+                    spriteVelocity.X = (float)Math.Cos(rotation) * tangentialVelocity;
+                    spriteVelocity.Y = (float)Math.Sin(rotation) * tangentialVelocity;
+                }
+                else if (spriteVelocity != Vector2.Zero)
+                {
+                    float i = spriteVelocity.X;
+                    float j = spriteVelocity.Y;
+                    spriteVelocity.X = i -= friction * i;
+                    spriteVelocity.Y = j -= friction * j;
+                }
+                //Auto 2
+                posicionAuto2 = spriteVelocity2 + posicionAuto2;
+                spriteRectangle2 = new Rectangle((int)posicionAuto2.X, (int)posicionAuto2.Y, autos[opcionjugador2].Width, autos[opcionjugador2].Height);
+                if (Keyboard.GetState().IsKeyDown(Keys.Right)) rotation2 += 0.1f;
+                if (Keyboard.GetState().IsKeyDown(Keys.Left)) rotation2 -= 0.1f;
 
-                if (keyboardState.IsKeyDown(Keys.W))
+                if (Keyboard.GetState().IsKeyDown(Keys.Up))
                 {
-                    velocidad.Y -= 2;
+                    spriteVelocity2.X = (float)Math.Cos(rotation2) * tangentialVelocity;
+                    spriteVelocity2.Y = (float)Math.Sin(rotation2) * tangentialVelocity;
                 }
-                if (keyboardState.IsKeyDown(Keys.S))
+                else if (spriteVelocity2 != Vector2.Zero)
                 {
-                    velocidad.Y += 2;
+                    float i = spriteVelocity2.X;
+                    float j = spriteVelocity2.Y;
+                    spriteVelocity2.X = i -= friction * i;
+                    spriteVelocity2.Y = j -= friction * j;
                 }
-                if (keyboardState.IsKeyDown(Keys.A))
-                {
-                    velocidad.X -= 2;
-                }
-                if (keyboardState.IsKeyDown(Keys.D))
-                {
-                    velocidad.X += 2;
-                }
-                if (velocidad != Vector2.Zero)
-                {
-                    velocidad.Normalize();
-                }
-                float velocidadTotal = 2f;
-                velocidad *= velocidadTotal;
-
-                posicionAuto += velocidad;
             }
-
         }
 
         public void LoadContent(ContentManager content)
@@ -178,11 +195,11 @@ namespace Juego.Clases
                 List<Rectangle> rectanguloautos = new List<Rectangle>();
                 for (int i = 0; i < autos.Length; i++)
                 {
-                    Rectangle rectangulo = new Rectangle(i * 80, 0, 80, 125);
+                    Rectangle rectangulo = new Rectangle(i * 125, 0, 125, 75);
                     rectanguloautos.Add(rectangulo);
                 }
-                spriteBatch.Draw(autos[opcionjugador1], posicionAuto, rectanguloautos[opcionjugador1], Color.White, 0f, Vector2.Zero, 0.5f, SpriteEffects.None, 0);
-
+                spriteBatch.Draw(autos[opcionjugador1], posicionAuto, rectanguloautos[opcionjugador1], Color.White, rotation, spriteorigin  , 0.7f, SpriteEffects.None, 0);
+                spriteBatch.Draw(autos[opcionjugador2], posicionAuto2, rectanguloautos[opcionjugador2], Color.White, rotation2, spriteorigin2, 0.7f, SpriteEffects.None, 0);
             }
             //seleccion del auto
             else 

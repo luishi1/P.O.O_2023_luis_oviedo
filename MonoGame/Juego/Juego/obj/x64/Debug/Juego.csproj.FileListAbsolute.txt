@@ -73,3 +73,9 @@ C:\Users\Alejandro oviedo\Desktop\P.O.O_2023_luis_oviedo\MonoGame\Juego\Juego\bi
 C:\Users\Alejandro oviedo\Desktop\P.O.O_2023_luis_oviedo\MonoGame\Juego\Juego\bin\x64\Debug\Content\Sprites\Carrera\fondo_menu.xnb
 C:\Users\Alejandro oviedo\Desktop\P.O.O_2023_luis_oviedo\MonoGame\Juego\Juego\bin\x64\Debug\Content\Sprites\Carrera\textos.xnb
 C:\Users\Alejandro oviedo\Desktop\P.O.O_2023_luis_oviedo\MonoGame\Juego\Juego\bin\x64\Debug\Content\Sprites\Carrera\iniciar.xnb
+C:\Users\Alejandro oviedo\Desktop\P.O.O_2023_luis_oviedo\MonoGame\Juego\Juego\bin\x64\Debug\MonoGame.Extended.dll
+C:\Users\Alejandro oviedo\Desktop\P.O.O_2023_luis_oviedo\MonoGame\Juego\Juego\bin\x64\Debug\MonoGame.Extended.Graphics.dll
+C:\Users\Alejandro oviedo\Desktop\P.O.O_2023_luis_oviedo\MonoGame\Juego\Juego\bin\x64\Debug\MonoGame.Extended.Tiled.dll
+C:\Users\Alejandro oviedo\Desktop\P.O.O_2023_luis_oviedo\MonoGame\Juego\Juego\bin\x64\Debug\Newtonsoft.Json.dll
+C:\Users\Alejandro oviedo\Desktop\P.O.O_2023_luis_oviedo\MonoGame\Juego\Juego\bin\x64\Debug\TiledSharp.dll
+C:\Users\Alejandro oviedo\Desktop\P.O.O_2023_luis_oviedo\MonoGame\Juego\Juego\bin\x64\Debug\Newtonsoft.Json.xml
