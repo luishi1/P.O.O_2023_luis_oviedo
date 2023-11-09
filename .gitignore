@@ -1,18 +1,18 @@
 # Ignorar la carpeta de archivos APP
-A_Pedido_del_Publico (APP)/
+A_Pedido_del_Publico (APP)/*
 
 # Ignorar la carpeta de archivos de Aprobacion de la materia
-Aprobacion_de_la_materia/
+Aprobacion_de_la_materia/*
 
 # Ignorar la carpeta de Ejercicios con listas
-Ejercicios_con_listass/
+Ejercicios_con_listass/*
 
 # Ignorar la carpeta de archivos de EvaluacionForm
-EvaluacionForm/
+EvaluacionForm/*
 
 # Ignorar la carpeta de Formulario
-Formulario/
+Formulario/*
 
 # Ignorar la carpeta de archivos de simulacion y practicas
-simulacion_y_practicas/
+simulacion_y_practicas/*
 
