@@ -44,10 +44,10 @@ namespace Juego.Clases
         private Vector2[] TotemPos = new Vector2[4];
 
         //CIRCULOOOS
-        Texture2D[] circuloR = new Texture2D[4];
-        Texture2D[] circuloA = new Texture2D[4];
-        Vector2[] circuloRpos = new Vector2[4];
-        Vector2[] circuloApos = new Vector2[4];
+        Texture2D[] circuloR = new Texture2D[3];
+        Texture2D[] circuloA = new Texture2D[3];
+        Vector2[] circuloRpos = new Vector2[3];
+        Vector2[] circuloApos = new Vector2[3];
         //voy a tener que re hacer esto jaja me cago en dios
 
         //constructor players
@@ -57,22 +57,19 @@ namespace Juego.Clases
             jugador2Position = new Vector2(400, 480);
             //totems
             TotemPos[0] = new Vector2(80, 250);
-            TotemPos[1] = new Vector2(200, 100);
+            TotemPos[1] = new Vector2(350, 100);
             TotemPos[2] = new Vector2(620, 250);
-            TotemPos[3] = new Vector2(500, 100);
             //CIRCULOS
 
             //Azul
             circuloApos[0] = new Vector2(155, 370);
-            circuloApos[1] = new Vector2(275, 220);
+            circuloApos[1] = new Vector2(425, 220);
             circuloApos[2] = new Vector2(695, 370);
-            circuloApos[3] = new Vector2(575, 220);
 
             //Rojos
             circuloRpos[0] = new Vector2(30, 370);
-            circuloRpos[1] = new Vector2(150, 220);
+            circuloRpos[1] = new Vector2(300, 220);
             circuloRpos[2] = new Vector2(570, 370);
-            circuloRpos[3] = new Vector2(450, 220);
         }
 
         public void LoadContent(ContentManager content)
@@ -90,13 +87,13 @@ namespace Juego.Clases
             frameWidth = ProtaCamRight[0].Width / 4;
 
             //cargar totem
-            for (int i = 0; i <= 3; i++)
+            for (int i = 0; i <= 2; i++)
             {
                 Totem[i] = content.Load<Texture2D>("Sprites/Totems/totem");
             }
 
 
-            for (int i = 0; i <= 3; i++)
+            for (int i = 0; i <= 2; i++)
             {
                 circuloR[i] = content.Load<Texture2D>("Sprites/Totems/O");
                 circuloA[i] = content.Load<Texture2D>("Sprites/Totems/O");
@@ -222,10 +219,11 @@ namespace Juego.Clases
         bool[] circuloAzulActivo = new bool[4];
         public bool PongActivo = false;
         public bool CarreraActiva = false;
+        public bool Fighters = false;
         public void Update(GameTime gameTime)
         {
             Rectangle[] totemRects = new Rectangle[4];
-            for (int i = 0; i < 4; i++)
+            for (int i = 0; i < 3; i++)
             {
                 totemRects[i] = new Rectangle((int)TotemPos[i].X, (int)TotemPos[i].Y, Totem[0].Width, Totem[0].Height);
                 circuloRojoActivo[i] = false;
@@ -237,14 +235,14 @@ namespace Juego.Clases
 
             Rectangle[] circuloRRects = new Rectangle[4];
             Rectangle[] circuloARects = new Rectangle[4];
-            for (int i = 0; i < 4; i++)
+            for (int i = 0; i < 3; i++)
             {
                 circuloRRects[i] = new Rectangle((int)circuloRpos[i].X, (int)circuloRpos[i].Y, circuloR[i].Width, circuloR[i].Height);
                 circuloARects[i] = new Rectangle((int)circuloApos[i].X, (int)circuloApos[i].Y, circuloA[i].Width, circuloA[i].Height);
             }
 
             // Verificar colisiones y activar eventos
-            for (int i = 0; i < 4; i++)
+            for (int i = 0; i < 3; i++)
             {
                 if (player1Rect.Intersects(circuloRRects[i]))
                 {
@@ -269,6 +267,8 @@ namespace Juego.Clases
             bool circuloAzul0Activo = circuloAzulActivo[0];
             bool circuloRojo1Activo = circuloRojoActivo[1];
             bool circuloAzul1Activo = circuloAzulActivo[1];
+            bool circuloRojo2Activo = circuloRojoActivo[2];
+            bool circuloAzul2Activo = circuloAzulActivo[2];
 
             // Verificar si ambos jugadores están en la posición adecuada y "Enter" fue presionado
             if (circuloRojo0Activo && circuloAzul0Activo && Keyboard.GetState().IsKeyDown(Keys.Enter) && !PongActivo)
@@ -279,13 +279,17 @@ namespace Juego.Clases
             {
                 CarreraActiva = true;
             }
+            if (circuloRojo2Activo && circuloAzul2Activo && Keyboard.GetState().IsKeyDown(Keys.Enter) && !PongActivo)
+            {
+                Fighters = true;
+            }
         }
         public void Draw(SpriteBatch spriteBatch)
         {
             //circulos
             Rectangle CirculoAzul = new Rectangle(0, 0, 24 * 2, 19 * 2);
             Rectangle CirculoRojo = new Rectangle(24 * 2, 0, 24 * 2, 19 * 2);
-            for (int i = 0; i <= 3; i++)
+            for (int i = 0; i <= 2; i++)
             {
                 spriteBatch.Draw(circuloR[i], circuloRpos[i], CirculoRojo, Color.White);
                 spriteBatch.Draw(circuloA[i], circuloApos[i], CirculoAzul, Color.White);
@@ -305,7 +309,7 @@ namespace Juego.Clases
             Rectangle Activo = new Rectangle(72 * 3, 0, 24 * 3, 46 * 3);
 
             //Eventos en caso de que los jugadores se posicionen encima de los circulos correspondientes
-            for (int i = 0; i < 4; i++)
+            for (int i = 0; i < 3; i++)
             {
                 if (circuloRojoActivo[i] && circuloAzulActivo[i])
                 {

@@ -1,2 +1,0 @@
-C:\Users\Alejandro oviedo\Desktop\P.O.O_2023_luis_oviedo\MonoGame\Juego\Juego\obj\x86\Release\Juego.csproj.AssemblyReference.cache
-C:\Users\Alejandro oviedo\Desktop\P.O.O_2023_luis_oviedo\MonoGame\Juego\Juego\obj\x86\Release\Juego.csproj.CoreCompileInputs.cache

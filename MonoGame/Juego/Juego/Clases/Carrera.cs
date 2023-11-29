@@ -2,8 +2,11 @@
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using MonoGame.Aseprite;
+using MonoGame.Aseprite.Tilemaps;
 using System;
 using System.Collections.Generic;
+using System.Reflection.Metadata;
 
 namespace Juego.Clases
 {
@@ -37,16 +40,21 @@ namespace Juego.Clases
         float rotation2;
         Vector2 spriteVelocity;
         Vector2 spriteVelocity2;
-        const float tangentialVelocity = 5f;
-        float friction = 0.1f;
+        float tangentialVelocity = 1.5f;
+        float friction = 0.04f;
+
+        //WEAS
+        TileMapManager Map;
 
         public Carrera(GraphicsDevice graphicsDevice)
         {
             this.graphicsDevice = graphicsDevice;
-            posicionAuto = new Vector2(400,300);
+            posicionAuto = new Vector2(400, 520);
+            posicionAuto2 = new Vector2(400, 540);
+            Map = new TileMapManager();
         }
 
-        public void Update(GameTime gameTime, KeyboardState keyboardState , GraphicsDevice graphicsDevice)
+        public void Update(GameTime gameTime, KeyboardState keyboardState, GraphicsDevice graphicsDevice)
         {
             keyboardStatePlayer = keyboardState;
 
@@ -152,6 +160,7 @@ namespace Juego.Clases
                     spriteVelocity.X = i -= friction * i;
                     spriteVelocity.Y = j -= friction * j;
                 }
+
                 //Auto 2
                 posicionAuto2 = spriteVelocity2 + posicionAuto2;
                 spriteRectangle2 = new Rectangle((int)posicionAuto2.X, (int)posicionAuto2.Y, autos[opcionjugador2].Width, autos[opcionjugador2].Height);
@@ -170,6 +179,8 @@ namespace Juego.Clases
                     spriteVelocity2.X = i -= friction * i;
                     spriteVelocity2.Y = j -= friction * j;
                 }
+
+                ColisionCapas();
             }
         }
 
@@ -189,21 +200,24 @@ namespace Juego.Clases
         public void Draw(SpriteBatch spriteBatch)
         {
             //CARRERA OFICIALMENTE
-            
+
             if (IniciarCarrera)
             {
+                Map.Draw();
+                spriteBatch.DrawString(spriteFont, $"Auto 1: Tile ({PosicionJugadorTile(posicionAuto).X}, {PosicionJugadorTile(posicionAuto).Y})", new Vector2(10, 10), Color.White);
+                spriteBatch.DrawString(spriteFont, $"Auto 2: Tile ({PosicionJugadorTile(posicionAuto2).X}, {PosicionJugadorTile(posicionAuto2).Y})", new Vector2(10, 30), Color.White);
                 List<Rectangle> rectanguloautos = new List<Rectangle>();
                 for (int i = 0; i < autos.Length; i++)
                 {
                     Rectangle rectangulo = new Rectangle(i * 125, 0, 125, 75);
                     rectanguloautos.Add(rectangulo);
                 }
-                spriteBatch.Draw(autos[opcionjugador1], posicionAuto, rectanguloautos[opcionjugador1], Color.White, rotation, spriteorigin  , 0.7f, SpriteEffects.None, 0);
-                spriteBatch.Draw(autos[opcionjugador2], posicionAuto2, rectanguloautos[opcionjugador2], Color.White, rotation2, spriteorigin2, 0.7f, SpriteEffects.None, 0);
+                spriteBatch.Draw(autos[opcionjugador1], posicionAuto, rectanguloautos[opcionjugador1], Color.White, rotation, spriteorigin, 0.2f, SpriteEffects.None, 0);
+                spriteBatch.Draw(autos[opcionjugador2], posicionAuto2, rectanguloautos[opcionjugador2], Color.White, rotation2, spriteorigin2, 0.2f, SpriteEffects.None, 0);
             }
             //seleccion del auto
-            else 
-            { 
+            else
+            {
                 spriteBatch.Draw(fondo, new Vector2(0, 0), Color.White);
                 spriteBatch.Draw(Titulo, new Vector2(20, 10), Color.White);
                 List<Rectangle> sinelegir = new List<Rectangle>();
@@ -222,17 +236,17 @@ namespace Juego.Clases
                 for (int i = 0; i < sinelegir.Count; i++)
                 {
                     Vector2 posicionAuto = new Vector2(columna * (45 * 3 + espaciadoHorizontal), fila * (45 * 3 + espaciadoVertical) + 100);
-                    if(i == opcionjugador2 && i == opcionjugador1 && Seleccionado && Seleccionado2)
+                    if (i == opcionjugador2 && i == opcionjugador1 && Seleccionado && Seleccionado2)
                     {
                         spriteBatch.Draw(roster[i], posicionAuto, sinelegir[i], Color.Gold);
                     }
                     else if (Seleccionado && i == opcionjugador1)
                     {
-                        spriteBatch.Draw(roster[i], posicionAuto, sinelegir[i], new Color(139, 90, 43)); 
+                        spriteBatch.Draw(roster[i], posicionAuto, sinelegir[i], new Color(139, 90, 43));
                     }
                     else if (Seleccionado2 && i == opcionjugador2)
                     {
-                        spriteBatch.Draw(roster[i], posicionAuto, sinelegir[i], new Color(192, 192, 192)); 
+                        spriteBatch.Draw(roster[i], posicionAuto, sinelegir[i], new Color(192, 192, 192));
                     }
                     else if (i == opcionjugador2 && i == opcionjugador1)
                     {
@@ -264,6 +278,67 @@ namespace Juego.Clases
                 }
             }
         }
-    }
 
+        private Point PosicionJugadorTile(Vector2 posicionJugador)
+        {
+            int columna = MathHelper.Clamp((int)(posicionJugador.X / 16), 0, Map.ArchivoMap.CanvasWidth - 1);
+            int fila = MathHelper.Clamp((int)(posicionJugador.Y / 16), 0, Map.ArchivoMap.CanvasHeight - 1);
+
+            return new Point(columna, fila);
+        }
+
+
+        private void ColisionCapas()
+        {
+            TilemapLayer capaPista = Map.Mapa["Pista"];
+            TilemapLayer capaSuelo = Map.Mapa["Suelo"];
+            TilemapLayer CapaMedio = Map.Mapa["MetaMedio"];
+            TilemapLayer CapaFinal = Map.Mapa["MetaFinal"];
+
+            // Obtener las posiciones de los jugadores en términos de tiles
+            Point posicionJugador1 = PosicionJugadorTile(posicionAuto);
+            Point posicionJugador2 = PosicionJugadorTile(posicionAuto2);
+
+            if (!capaPista.GetTile(posicionJugador1.X, posicionJugador1.Y).IsEmpty)
+            {
+
+            }
+            else if (!capaSuelo.GetTile(posicionJugador1.X, posicionJugador1.Y).IsEmpty)
+            {
+                spriteVelocity *= 0.5f;
+            }
+            else if (!CapaMedio.GetTile(posicionJugador1.X, posicionJugador1.Y).IsEmpty || !CapaFinal.GetTile(posicionJugador1.X, posicionJugador1.Y).IsEmpty)
+            {
+
+            }
+
+            if (!capaPista.GetTile(posicionJugador2.X, posicionJugador2.Y).IsEmpty)
+            {
+
+            }
+            else if (!capaSuelo.GetTile(posicionJugador2.X, posicionJugador2.Y).IsEmpty)
+            {
+                spriteVelocity2 *= 0.5f;
+            }
+            else if (!CapaMedio.GetTile(posicionJugador2.X, posicionJugador2.Y).IsEmpty || !CapaFinal.GetTile(posicionJugador2.X, posicionJugador2.Y).IsEmpty)
+            {
+
+            }
+        }
+
+        public void Reset()
+        {
+            opcionjugador1 = 0;
+            opcionjugador2 = 1;
+            tiempoTranscurrido = 0f;
+            Seleccionado = false;
+            Seleccionado2 = false;
+            IniciarCarrera = false;
+            posicionAuto = new Vector2(400, 520);
+            posicionAuto2 = new Vector2(400, 540);
+            spriteVelocity = Vector2.Zero;
+            spriteVelocity2 = Vector2.Zero;
+        }
+
+    }
 }

@@ -1,62 +1,110 @@
 <?xml version="1.0" encoding="utf-8"?>
-<SourceFileCollection xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<SourceFileCollection xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Profile>Reach</Profile>
   <Platform>Windows</Platform>
   <Config />
   <SourceFiles>
-    <File>C:/Users/Alejandro oviedo/Desktop/P.O.O_2023_luis_oviedo/MonoGame/Juego/Juego/Content/Sprites/Carrera/autos.png</File>
-    <File>C:/Users/Alejandro oviedo/Desktop/P.O.O_2023_luis_oviedo/MonoGame/Juego/Juego/Content/Sprites/Carrera/File.spritefont</File>
-    <File>C:/Users/Alejandro oviedo/Desktop/P.O.O_2023_luis_oviedo/MonoGame/Juego/Juego/Content/Sprites/Carrera/fondo_menu.png</File>
-    <File>C:/Users/Alejandro oviedo/Desktop/P.O.O_2023_luis_oviedo/MonoGame/Juego/Juego/Content/Sprites/Carrera/iniciar.png</File>
-    <File>C:/Users/Alejandro oviedo/Desktop/P.O.O_2023_luis_oviedo/MonoGame/Juego/Juego/Content/Sprites/Carrera/roster_auto.png</File>
-    <File>C:/Users/Alejandro oviedo/Desktop/P.O.O_2023_luis_oviedo/MonoGame/Juego/Juego/Content/Sprites/Carrera/Titulo.png</File>
-    <File>C:/Users/Alejandro oviedo/Desktop/P.O.O_2023_luis_oviedo/MonoGame/Juego/Juego/Content/Sprites/PongGame/File.spritefont</File>
-    <File>C:/Users/Alejandro oviedo/Desktop/P.O.O_2023_luis_oviedo/MonoGame/Juego/Juego/Content/Sprites/PongGame/fondo.png</File>
-    <File>C:/Users/Alejandro oviedo/Desktop/P.O.O_2023_luis_oviedo/MonoGame/Juego/Juego/Content/Sprites/PongGame/pedro.png</File>
-    <File>C:/Users/Alejandro oviedo/Desktop/P.O.O_2023_luis_oviedo/MonoGame/Juego/Juego/Content/Sprites/PongGame/pelota.png</File>
-    <File>C:/Users/Alejandro oviedo/Desktop/P.O.O_2023_luis_oviedo/MonoGame/Juego/Juego/Content/Sprites/PongGame/pongbip.wav</File>
-    <File>C:/Users/Alejandro oviedo/Desktop/P.O.O_2023_luis_oviedo/MonoGame/Juego/Juego/Content/Sprites/PongGame/pongmusic.mp3</File>
-    <File>C:/Users/Alejandro oviedo/Desktop/P.O.O_2023_luis_oviedo/MonoGame/Juego/Juego/Content/Sprites/PongGame/powerups.png</File>
-    <File>C:/Users/Alejandro oviedo/Desktop/P.O.O_2023_luis_oviedo/MonoGame/Juego/Juego/Content/Sprites/PongGame/poweup.wav</File>
-    <File>C:/Users/Alejandro oviedo/Desktop/P.O.O_2023_luis_oviedo/MonoGame/Juego/Juego/Content/Sprites/PongGame/score.wav</File>
-    <File>C:/Users/Alejandro oviedo/Desktop/P.O.O_2023_luis_oviedo/MonoGame/Juego/Juego/Content/Sprites/SpritePlayers/player1_down1.png</File>
-    <File>C:/Users/Alejandro oviedo/Desktop/P.O.O_2023_luis_oviedo/MonoGame/Juego/Juego/Content/Sprites/SpritePlayers/player1_down2.png</File>
-    <File>C:/Users/Alejandro oviedo/Desktop/P.O.O_2023_luis_oviedo/MonoGame/Juego/Juego/Content/Sprites/SpritePlayers/player1_down3.png</File>
-    <File>C:/Users/Alejandro oviedo/Desktop/P.O.O_2023_luis_oviedo/MonoGame/Juego/Juego/Content/Sprites/SpritePlayers/player1_down4.png</File>
-    <File>C:/Users/Alejandro oviedo/Desktop/P.O.O_2023_luis_oviedo/MonoGame/Juego/Juego/Content/Sprites/SpritePlayers/player1_left1.png</File>
-    <File>C:/Users/Alejandro oviedo/Desktop/P.O.O_2023_luis_oviedo/MonoGame/Juego/Juego/Content/Sprites/SpritePlayers/player1_left2.png</File>
-    <File>C:/Users/Alejandro oviedo/Desktop/P.O.O_2023_luis_oviedo/MonoGame/Juego/Juego/Content/Sprites/SpritePlayers/player1_left3.png</File>
-    <File>C:/Users/Alejandro oviedo/Desktop/P.O.O_2023_luis_oviedo/MonoGame/Juego/Juego/Content/Sprites/SpritePlayers/player1_left4.png</File>
-    <File>C:/Users/Alejandro oviedo/Desktop/P.O.O_2023_luis_oviedo/MonoGame/Juego/Juego/Content/Sprites/SpritePlayers/player1_right1.png</File>
-    <File>C:/Users/Alejandro oviedo/Desktop/P.O.O_2023_luis_oviedo/MonoGame/Juego/Juego/Content/Sprites/SpritePlayers/player1_right2.png</File>
-    <File>C:/Users/Alejandro oviedo/Desktop/P.O.O_2023_luis_oviedo/MonoGame/Juego/Juego/Content/Sprites/SpritePlayers/player1_right3.png</File>
-    <File>C:/Users/Alejandro oviedo/Desktop/P.O.O_2023_luis_oviedo/MonoGame/Juego/Juego/Content/Sprites/SpritePlayers/player1_right4.png</File>
-    <File>C:/Users/Alejandro oviedo/Desktop/P.O.O_2023_luis_oviedo/MonoGame/Juego/Juego/Content/Sprites/SpritePlayers/player1_up1.png</File>
-    <File>C:/Users/Alejandro oviedo/Desktop/P.O.O_2023_luis_oviedo/MonoGame/Juego/Juego/Content/Sprites/SpritePlayers/player1_up2.png</File>
-    <File>C:/Users/Alejandro oviedo/Desktop/P.O.O_2023_luis_oviedo/MonoGame/Juego/Juego/Content/Sprites/SpritePlayers/player1_up3.png</File>
-    <File>C:/Users/Alejandro oviedo/Desktop/P.O.O_2023_luis_oviedo/MonoGame/Juego/Juego/Content/Sprites/SpritePlayers/player1_up4.png</File>
-    <File>C:/Users/Alejandro oviedo/Desktop/P.O.O_2023_luis_oviedo/MonoGame/Juego/Juego/Content/Sprites/SpritePlayers/player2_down1.png</File>
-    <File>C:/Users/Alejandro oviedo/Desktop/P.O.O_2023_luis_oviedo/MonoGame/Juego/Juego/Content/Sprites/SpritePlayers/player2_down2.png</File>
-    <File>C:/Users/Alejandro oviedo/Desktop/P.O.O_2023_luis_oviedo/MonoGame/Juego/Juego/Content/Sprites/SpritePlayers/player2_down3.png</File>
-    <File>C:/Users/Alejandro oviedo/Desktop/P.O.O_2023_luis_oviedo/MonoGame/Juego/Juego/Content/Sprites/SpritePlayers/player2_down4.png</File>
-    <File>C:/Users/Alejandro oviedo/Desktop/P.O.O_2023_luis_oviedo/MonoGame/Juego/Juego/Content/Sprites/SpritePlayers/player2_left1.png</File>
-    <File>C:/Users/Alejandro oviedo/Desktop/P.O.O_2023_luis_oviedo/MonoGame/Juego/Juego/Content/Sprites/SpritePlayers/player2_left2.png</File>
-    <File>C:/Users/Alejandro oviedo/Desktop/P.O.O_2023_luis_oviedo/MonoGame/Juego/Juego/Content/Sprites/SpritePlayers/player2_left3.png</File>
-    <File>C:/Users/Alejandro oviedo/Desktop/P.O.O_2023_luis_oviedo/MonoGame/Juego/Juego/Content/Sprites/SpritePlayers/player2_left4.png</File>
-    <File>C:/Users/Alejandro oviedo/Desktop/P.O.O_2023_luis_oviedo/MonoGame/Juego/Juego/Content/Sprites/SpritePlayers/player2_right1.png</File>
-    <File>C:/Users/Alejandro oviedo/Desktop/P.O.O_2023_luis_oviedo/MonoGame/Juego/Juego/Content/Sprites/SpritePlayers/player2_right2.png</File>
-    <File>C:/Users/Alejandro oviedo/Desktop/P.O.O_2023_luis_oviedo/MonoGame/Juego/Juego/Content/Sprites/SpritePlayers/player2_right3.png</File>
-    <File>C:/Users/Alejandro oviedo/Desktop/P.O.O_2023_luis_oviedo/MonoGame/Juego/Juego/Content/Sprites/SpritePlayers/player2_right4.png</File>
-    <File>C:/Users/Alejandro oviedo/Desktop/P.O.O_2023_luis_oviedo/MonoGame/Juego/Juego/Content/Sprites/SpritePlayers/player2_up1.png</File>
-    <File>C:/Users/Alejandro oviedo/Desktop/P.O.O_2023_luis_oviedo/MonoGame/Juego/Juego/Content/Sprites/SpritePlayers/player2_up2.png</File>
-    <File>C:/Users/Alejandro oviedo/Desktop/P.O.O_2023_luis_oviedo/MonoGame/Juego/Juego/Content/Sprites/SpritePlayers/player2_up3.png</File>
-    <File>C:/Users/Alejandro oviedo/Desktop/P.O.O_2023_luis_oviedo/MonoGame/Juego/Juego/Content/Sprites/SpritePlayers/player2_up4.png</File>
-    <File>C:/Users/Alejandro oviedo/Desktop/P.O.O_2023_luis_oviedo/MonoGame/Juego/Juego/Content/Sprites/Totems/O.png</File>
-    <File>C:/Users/Alejandro oviedo/Desktop/P.O.O_2023_luis_oviedo/MonoGame/Juego/Juego/Content/Sprites/Totems/totem.png</File>
+    <File>C:/Users/Alejandro Oviedo/Desktop/P.O.O_2023_luis_oviedo/MonoGame/Juego/Juego/Content/Mapas/MapaCarrera/MapaPista01.aseprite</File>
+    <File>C:/Users/Alejandro Oviedo/Desktop/P.O.O_2023_luis_oviedo/MonoGame/Juego/Juego/Content/Sprites/Carrera/autos.png</File>
+    <File>C:/Users/Alejandro Oviedo/Desktop/P.O.O_2023_luis_oviedo/MonoGame/Juego/Juego/Content/Sprites/Carrera/File.spritefont</File>
+    <File>C:/Users/Alejandro Oviedo/Desktop/P.O.O_2023_luis_oviedo/MonoGame/Juego/Juego/Content/Sprites/Carrera/fondo_menu.png</File>
+    <File>C:/Users/Alejandro Oviedo/Desktop/P.O.O_2023_luis_oviedo/MonoGame/Juego/Juego/Content/Sprites/Carrera/iniciar.png</File>
+    <File>C:/Users/Alejandro Oviedo/Desktop/P.O.O_2023_luis_oviedo/MonoGame/Juego/Juego/Content/Sprites/Carrera/roster_auto.png</File>
+    <File>C:/Users/Alejandro Oviedo/Desktop/P.O.O_2023_luis_oviedo/MonoGame/Juego/Juego/Content/Sprites/Carrera/Titulo.png</File>
+    <File>C:/Users/Alejandro Oviedo/Desktop/P.O.O_2023_luis_oviedo/MonoGame/Juego/Juego/Content/Sprites/PongGame/File.spritefont</File>
+    <File>C:/Users/Alejandro Oviedo/Desktop/P.O.O_2023_luis_oviedo/MonoGame/Juego/Juego/Content/Sprites/PongGame/fondo.png</File>
+    <File>C:/Users/Alejandro Oviedo/Desktop/P.O.O_2023_luis_oviedo/MonoGame/Juego/Juego/Content/Sprites/PongGame/pedro.png</File>
+    <File>C:/Users/Alejandro Oviedo/Desktop/P.O.O_2023_luis_oviedo/MonoGame/Juego/Juego/Content/Sprites/PongGame/pelota.png</File>
+    <File>C:/Users/Alejandro Oviedo/Desktop/P.O.O_2023_luis_oviedo/MonoGame/Juego/Juego/Content/Sprites/PongGame/pongbip.wav</File>
+    <File>C:/Users/Alejandro Oviedo/Desktop/P.O.O_2023_luis_oviedo/MonoGame/Juego/Juego/Content/Sprites/PongGame/pongmusic.mp3</File>
+    <File>C:/Users/Alejandro Oviedo/Desktop/P.O.O_2023_luis_oviedo/MonoGame/Juego/Juego/Content/Sprites/PongGame/powerups.png</File>
+    <File>C:/Users/Alejandro Oviedo/Desktop/P.O.O_2023_luis_oviedo/MonoGame/Juego/Juego/Content/Sprites/PongGame/poweup.wav</File>
+    <File>C:/Users/Alejandro Oviedo/Desktop/P.O.O_2023_luis_oviedo/MonoGame/Juego/Juego/Content/Sprites/PongGame/score.wav</File>
+    <File>C:/Users/Alejandro Oviedo/Desktop/P.O.O_2023_luis_oviedo/MonoGame/Juego/Juego/Content/Sprites/SpritePlayers/player1_down1.png</File>
+    <File>C:/Users/Alejandro Oviedo/Desktop/P.O.O_2023_luis_oviedo/MonoGame/Juego/Juego/Content/Sprites/SpritePlayers/player1_down2.png</File>
+    <File>C:/Users/Alejandro Oviedo/Desktop/P.O.O_2023_luis_oviedo/MonoGame/Juego/Juego/Content/Sprites/SpritePlayers/player1_down3.png</File>
+    <File>C:/Users/Alejandro Oviedo/Desktop/P.O.O_2023_luis_oviedo/MonoGame/Juego/Juego/Content/Sprites/SpritePlayers/player1_down4.png</File>
+    <File>C:/Users/Alejandro Oviedo/Desktop/P.O.O_2023_luis_oviedo/MonoGame/Juego/Juego/Content/Sprites/SpritePlayers/player1_left1.png</File>
+    <File>C:/Users/Alejandro Oviedo/Desktop/P.O.O_2023_luis_oviedo/MonoGame/Juego/Juego/Content/Sprites/SpritePlayers/player1_left2.png</File>
+    <File>C:/Users/Alejandro Oviedo/Desktop/P.O.O_2023_luis_oviedo/MonoGame/Juego/Juego/Content/Sprites/SpritePlayers/player1_left3.png</File>
+    <File>C:/Users/Alejandro Oviedo/Desktop/P.O.O_2023_luis_oviedo/MonoGame/Juego/Juego/Content/Sprites/SpritePlayers/player1_left4.png</File>
+    <File>C:/Users/Alejandro Oviedo/Desktop/P.O.O_2023_luis_oviedo/MonoGame/Juego/Juego/Content/Sprites/SpritePlayers/player1_right1.png</File>
+    <File>C:/Users/Alejandro Oviedo/Desktop/P.O.O_2023_luis_oviedo/MonoGame/Juego/Juego/Content/Sprites/SpritePlayers/player1_right2.png</File>
+    <File>C:/Users/Alejandro Oviedo/Desktop/P.O.O_2023_luis_oviedo/MonoGame/Juego/Juego/Content/Sprites/SpritePlayers/player1_right3.png</File>
+    <File>C:/Users/Alejandro Oviedo/Desktop/P.O.O_2023_luis_oviedo/MonoGame/Juego/Juego/Content/Sprites/SpritePlayers/player1_right4.png</File>
+    <File>C:/Users/Alejandro Oviedo/Desktop/P.O.O_2023_luis_oviedo/MonoGame/Juego/Juego/Content/Sprites/SpritePlayers/player1_up1.png</File>
+    <File>C:/Users/Alejandro Oviedo/Desktop/P.O.O_2023_luis_oviedo/MonoGame/Juego/Juego/Content/Sprites/SpritePlayers/player1_up2.png</File>
+    <File>C:/Users/Alejandro Oviedo/Desktop/P.O.O_2023_luis_oviedo/MonoGame/Juego/Juego/Content/Sprites/SpritePlayers/player1_up3.png</File>
+    <File>C:/Users/Alejandro Oviedo/Desktop/P.O.O_2023_luis_oviedo/MonoGame/Juego/Juego/Content/Sprites/SpritePlayers/player1_up4.png</File>
+    <File>C:/Users/Alejandro Oviedo/Desktop/P.O.O_2023_luis_oviedo/MonoGame/Juego/Juego/Content/Sprites/SpritePlayers/player2_down1.png</File>
+    <File>C:/Users/Alejandro Oviedo/Desktop/P.O.O_2023_luis_oviedo/MonoGame/Juego/Juego/Content/Sprites/SpritePlayers/player2_down2.png</File>
+    <File>C:/Users/Alejandro Oviedo/Desktop/P.O.O_2023_luis_oviedo/MonoGame/Juego/Juego/Content/Sprites/SpritePlayers/player2_down3.png</File>
+    <File>C:/Users/Alejandro Oviedo/Desktop/P.O.O_2023_luis_oviedo/MonoGame/Juego/Juego/Content/Sprites/SpritePlayers/player2_down4.png</File>
+    <File>C:/Users/Alejandro Oviedo/Desktop/P.O.O_2023_luis_oviedo/MonoGame/Juego/Juego/Content/Sprites/SpritePlayers/player2_left1.png</File>
+    <File>C:/Users/Alejandro Oviedo/Desktop/P.O.O_2023_luis_oviedo/MonoGame/Juego/Juego/Content/Sprites/SpritePlayers/player2_left2.png</File>
+    <File>C:/Users/Alejandro Oviedo/Desktop/P.O.O_2023_luis_oviedo/MonoGame/Juego/Juego/Content/Sprites/SpritePlayers/player2_left3.png</File>
+    <File>C:/Users/Alejandro Oviedo/Desktop/P.O.O_2023_luis_oviedo/MonoGame/Juego/Juego/Content/Sprites/SpritePlayers/player2_left4.png</File>
+    <File>C:/Users/Alejandro Oviedo/Desktop/P.O.O_2023_luis_oviedo/MonoGame/Juego/Juego/Content/Sprites/SpritePlayers/player2_right1.png</File>
+    <File>C:/Users/Alejandro Oviedo/Desktop/P.O.O_2023_luis_oviedo/MonoGame/Juego/Juego/Content/Sprites/SpritePlayers/player2_right2.png</File>
+    <File>C:/Users/Alejandro Oviedo/Desktop/P.O.O_2023_luis_oviedo/MonoGame/Juego/Juego/Content/Sprites/SpritePlayers/player2_right3.png</File>
+    <File>C:/Users/Alejandro Oviedo/Desktop/P.O.O_2023_luis_oviedo/MonoGame/Juego/Juego/Content/Sprites/SpritePlayers/player2_right4.png</File>
+    <File>C:/Users/Alejandro Oviedo/Desktop/P.O.O_2023_luis_oviedo/MonoGame/Juego/Juego/Content/Sprites/SpritePlayers/player2_up1.png</File>
+    <File>C:/Users/Alejandro Oviedo/Desktop/P.O.O_2023_luis_oviedo/MonoGame/Juego/Juego/Content/Sprites/SpritePlayers/player2_up2.png</File>
+    <File>C:/Users/Alejandro Oviedo/Desktop/P.O.O_2023_luis_oviedo/MonoGame/Juego/Juego/Content/Sprites/SpritePlayers/player2_up3.png</File>
+    <File>C:/Users/Alejandro Oviedo/Desktop/P.O.O_2023_luis_oviedo/MonoGame/Juego/Juego/Content/Sprites/SpritePlayers/player2_up4.png</File>
+    <File>C:/Users/Alejandro Oviedo/Desktop/P.O.O_2023_luis_oviedo/MonoGame/Juego/Juego/Content/Sprites/Totems/O.png</File>
+    <File>C:/Users/Alejandro Oviedo/Desktop/P.O.O_2023_luis_oviedo/MonoGame/Juego/Juego/Content/Sprites/Totems/totem.png</File>
   </SourceFiles>
   <DestFiles>
     <File xsi:nil="true" />
+    <File xsi:nil="true" />
     <File>Sprites/Carrera/textos</File>
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
     <File>Sprites/PongGame/Puntos</File>
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
   </DestFiles>
 </SourceFileCollection>

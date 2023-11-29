@@ -12,17 +12,17 @@ namespace Juego
         {
             Menu,
             Pong,
-            BudokaiBrawl,
-            Quemados,
+            Fighters,
             Carrera,
         }
 
         private Juego estadoActual;
-        private GraphicsDeviceManager _graphics;
-        private SpriteBatch _spriteBatch;
+        public GraphicsDeviceManager _graphics;
+        public SpriteBatch _spriteBatch;
         private Players players;
         private Pong pong;
         private Carrera carrera;
+        private Fighters fighters;
 
         public Game1()
         {
@@ -33,30 +33,34 @@ namespace Juego
             Content.RootDirectory = "Content";
             players = new Players();
             pong = new Pong();
-            carrera = new Carrera(GraphicsDevice);
+            fighters = new Fighters();
         }
 
         protected override void Initialize()
         {
-            estadoActual = Juego.Menu; 
+            estadoActual = Juego.Menu;
             base.Initialize();
+            carrera = new Carrera(GraphicsDevice);
         }
 
         protected override void LoadContent()
         {
             _spriteBatch = new SpriteBatch(GraphicsDevice);
+            Variables._graphics = GraphicsDevice;
+            Variables._spritebatch = _spriteBatch; 
             players.LoadContent(Content);
             pong.LoadContent(Content);
         }
 
         private void ResetMenu()
         {
-            players.Reset(); 
+            players.Reset();
         }
 
         protected override void Update(GameTime gameTime)
         {
             KeyboardState keyboardState = Keyboard.GetState();
+
 
             switch (estadoActual)
             {
@@ -76,6 +80,11 @@ namespace Juego
                     {
                         estadoActual = Juego.Carrera;
                         carrera.LoadContent(Content);
+                    }
+                    if (players.Fighters)
+                    {
+                        estadoActual = Juego.Fighters;
+                        fighters.LoadContent(Content);
                     }
                     break;
 
@@ -97,22 +106,32 @@ namespace Juego
                     }
                     break;
 
-                case Juego.Quemados:
+                case Juego.Fighters:
+                    if (keyboardState.IsKeyDown(Keys.P))
+                    {
+                        estadoActual = Juego.Menu;
+                        ResetMenu();
+                        fighters.Reset();
+                        players.Fighters = false;
+                    }
+                    else
+                    {
+                        fighters.Update(gameTime);
+                    }
                     break;
 
                 case Juego.Carrera:
                     if (keyboardState.IsKeyDown(Keys.P))
                     {
                         estadoActual = Juego.Menu;
-                        //volver a menu
+                        ResetMenu();
+                        carrera.Reset();
+                        players.CarreraActiva = false;
                     }
                     else
                     {
-                        carrera.Update(gameTime, Keyboard.GetState() , GraphicsDevice);
+                        carrera.Update(gameTime, Keyboard.GetState(), GraphicsDevice);
                     }
-                    break;
-
-                case Juego.BudokaiBrawl:
                     break;
 
                 default:
@@ -141,6 +160,10 @@ namespace Juego
                 case Juego.Carrera:
                     GraphicsDevice.Clear(Color.Black);
                     carrera.Draw(_spriteBatch);
+                    break;
+                case Juego.Fighters:
+                    GraphicsDevice.Clear(Color.Black);
+                    fighters.Draw(_spriteBatch);
                     break;
                 default:
                     break;

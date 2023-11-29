@@ -11,8 +11,18 @@
 #-------------------------------- References --------------------------------#
 
 /reference:..\..\packages\MonoGame.Extended.Content.Pipeline.3.8.0\tools\MonoGame.Extended.Content.Pipeline.dll
+/reference:..\..\..\..\..\..\.nuget\packages\monogame.aseprite\5.1.1\lib\net6.0\MonoGame.Aseprite.dll
+/reference:..\..\..\..\..\..\.nuget\packages\monogame.aseprite\5.1.1\content\Monogame.Aseprite.Content.Pipeline.dll
 
 #---------------------------------- Content ---------------------------------#
+
+#begin Mapas/MapaCarrera/MapaPista01.aseprite
+/importer:AsepriteFileContentImporter
+/processor:TilemapContentProcessor
+/processorParam:FrameIndex=0
+/processorParam:OnlyVisibleLayer=True
+/processorParam:GenerateMipmaps=False
+/build:Mapas/MapaCarrera/MapaPista01.aseprite
 
 #begin Sprites/Carrera/autos.png
 /importer:TextureImporter
@@ -555,6 +565,18 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:Sprites/Totems/O.png
+
+#begin Sprites/Totems/PROXIMAMENTE.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Sprites/Totems/PROXIMAMENTE.png
 
 #begin Sprites/Totems/totem.png
 /importer:TextureImporter
