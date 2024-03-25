@@ -4,11 +4,24 @@
   <Platform>Windows</Platform>
   <Config />
   <SourceFiles>
+    <File>C:/Users/Alejandro Oviedo/Desktop/P.O.O_2023_luis_oviedo/MonoGame/Juego/Juego/Content/Mapas/MapaCarrera/fondomapa.png</File>
     <File>C:/Users/Alejandro Oviedo/Desktop/P.O.O_2023_luis_oviedo/MonoGame/Juego/Juego/Content/Mapas/MapaCarrera/MapaPista01.aseprite</File>
+    <File>C:/Users/Alejandro Oviedo/Desktop/P.O.O_2023_luis_oviedo/MonoGame/Juego/Juego/Content/Mapas/MapaCarrera/MapaPista02.aseprite</File>
+    <File>C:/Users/Alejandro Oviedo/Desktop/P.O.O_2023_luis_oviedo/MonoGame/Juego/Juego/Content/Mapas/MapaCarrera/MapaPista03.aseprite</File>
+    <File>C:/Users/Alejandro Oviedo/Desktop/P.O.O_2023_luis_oviedo/MonoGame/Juego/Juego/Content/Mapas/MapaCarrera/MapaPista04.aseprite</File>
+    <File>C:/Users/Alejandro Oviedo/Desktop/P.O.O_2023_luis_oviedo/MonoGame/Juego/Juego/Content/Sprites/Carrera/AutoMotor.mp3</File>
     <File>C:/Users/Alejandro Oviedo/Desktop/P.O.O_2023_luis_oviedo/MonoGame/Juego/Juego/Content/Sprites/Carrera/autos.png</File>
     <File>C:/Users/Alejandro Oviedo/Desktop/P.O.O_2023_luis_oviedo/MonoGame/Juego/Juego/Content/Sprites/Carrera/File.spritefont</File>
+    <File>C:/Users/Alejandro Oviedo/Desktop/P.O.O_2023_luis_oviedo/MonoGame/Juego/Juego/Content/Sprites/Carrera/fodoforo.png</File>
     <File>C:/Users/Alejandro Oviedo/Desktop/P.O.O_2023_luis_oviedo/MonoGame/Juego/Juego/Content/Sprites/Carrera/fondo_menu.png</File>
     <File>C:/Users/Alejandro Oviedo/Desktop/P.O.O_2023_luis_oviedo/MonoGame/Juego/Juego/Content/Sprites/Carrera/iniciar.png</File>
+    <File>C:/Users/Alejandro Oviedo/Desktop/P.O.O_2023_luis_oviedo/MonoGame/Juego/Juego/Content/Sprites/Carrera/InicioContadorCarreraYaGOOHYEAHLOCURA.mp3</File>
+    <File>C:/Users/Alejandro Oviedo/Desktop/P.O.O_2023_luis_oviedo/MonoGame/Juego/Juego/Content/Sprites/Carrera/limite.png</File>
+    <File>C:/Users/Alejandro Oviedo/Desktop/P.O.O_2023_luis_oviedo/MonoGame/Juego/Juego/Content/Sprites/Carrera/mapaselector.png</File>
+    <File>C:/Users/Alejandro Oviedo/Desktop/P.O.O_2023_luis_oviedo/MonoGame/Juego/Juego/Content/Sprites/Carrera/MusicaCarrera.mp3</File>
+    <File>C:/Users/Alejandro Oviedo/Desktop/P.O.O_2023_luis_oviedo/MonoGame/Juego/Juego/Content/Sprites/Carrera/MusicaMenu.mp3</File>
+    <File>C:/Users/Alejandro Oviedo/Desktop/P.O.O_2023_luis_oviedo/MonoGame/Juego/Juego/Content/Sprites/Carrera/numeros.png</File>
+    <File>C:/Users/Alejandro Oviedo/Desktop/P.O.O_2023_luis_oviedo/MonoGame/Juego/Juego/Content/Sprites/Carrera/penguintroulse.mp3</File>
     <File>C:/Users/Alejandro Oviedo/Desktop/P.O.O_2023_luis_oviedo/MonoGame/Juego/Juego/Content/Sprites/Carrera/roster_auto.png</File>
     <File>C:/Users/Alejandro Oviedo/Desktop/P.O.O_2023_luis_oviedo/MonoGame/Juego/Juego/Content/Sprites/Carrera/Titulo.png</File>
     <File>C:/Users/Alejandro Oviedo/Desktop/P.O.O_2023_luis_oviedo/MonoGame/Juego/Juego/Content/Sprites/PongGame/File.spritefont</File>
@@ -53,17 +66,32 @@
     <File>C:/Users/Alejandro Oviedo/Desktop/P.O.O_2023_luis_oviedo/MonoGame/Juego/Juego/Content/Sprites/SpritePlayers/player2_up3.png</File>
     <File>C:/Users/Alejandro Oviedo/Desktop/P.O.O_2023_luis_oviedo/MonoGame/Juego/Juego/Content/Sprites/SpritePlayers/player2_up4.png</File>
     <File>C:/Users/Alejandro Oviedo/Desktop/P.O.O_2023_luis_oviedo/MonoGame/Juego/Juego/Content/Sprites/Totems/O.png</File>
+    <File>C:/Users/Alejandro Oviedo/Desktop/P.O.O_2023_luis_oviedo/MonoGame/Juego/Juego/Content/Sprites/Totems/PROXIMAMENTE.png</File>
     <File>C:/Users/Alejandro Oviedo/Desktop/P.O.O_2023_luis_oviedo/MonoGame/Juego/Juego/Content/Sprites/Totems/totem.png</File>
   </SourceFiles>
   <DestFiles>
     <File xsi:nil="true" />
     <File xsi:nil="true" />
-    <File>Sprites/Carrera/textos</File>
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File>Sprites/PongGame/Puntos</File>
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />

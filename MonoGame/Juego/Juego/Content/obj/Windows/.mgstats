@@ -1,2 +1,2 @@
 Source File,Dest File,Processor Type,Content Type,Source File Size,Dest File Size,Build Seconds
-"C:/Users/Alejandro Oviedo/Desktop/P.O.O_2023_luis_oviedo/MonoGame/Juego/Juego/Content/Mapas/MapaCarrera/MapaPista01.aseprite","C:/Users/Alejandro Oviedo/Desktop/P.O.O_2023_luis_oviedo/MonoGame/Juego/Juego/Content/bin/Windows/Mapas/MapaCarrera/MapaPista01.xnb","TilemapContentProcessor","TilemapContent",4568,142716,0,3818008
+"C:/Users/Alejandro Oviedo/Desktop/P.O.O_2023_luis_oviedo/MonoGame/Juego/Juego/Content/Mapas/MapaCarrera/MapaPista01.aseprite","C:/Users/Alejandro Oviedo/Desktop/P.O.O_2023_luis_oviedo/MonoGame/Juego/Juego/Content/bin/Windows/Mapas/MapaCarrera/MapaPista01.xnb","AsepriteFileContentProcessor","AsepriteFileImportResult",3121,3234,0,5861829

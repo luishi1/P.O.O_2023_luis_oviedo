@@ -13,5 +13,8 @@ namespace Juego.Clases
 
         public static Viewport viewport { get; set; }
 
+        public static int screenWidth = 800;
+        public static int screenHeight = 600;
+
     }
 }

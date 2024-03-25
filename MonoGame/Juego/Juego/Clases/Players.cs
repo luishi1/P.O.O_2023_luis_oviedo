@@ -48,7 +48,6 @@ namespace Juego.Clases
         Texture2D[] circuloA = new Texture2D[3];
         Vector2[] circuloRpos = new Vector2[3];
         Vector2[] circuloApos = new Vector2[3];
-        //voy a tener que re hacer esto jaja me cago en dios
 
         //constructor players
         public Players()
@@ -291,8 +290,10 @@ namespace Juego.Clases
             Rectangle CirculoRojo = new Rectangle(24 * 2, 0, 24 * 2, 19 * 2);
             for (int i = 0; i <= 2; i++)
             {
+                spriteBatch.Begin();
                 spriteBatch.Draw(circuloR[i], circuloRpos[i], CirculoRojo, Color.White);
                 spriteBatch.Draw(circuloA[i], circuloApos[i], CirculoAzul, Color.White);
+                spriteBatch.End();
             }
 
             DrawPlayer(spriteBatch, jugador1Position, ProtaCamUp, ProtaCamDown, ProtaCamLeft, ProtaCamRight, frameactualJugador1, currentDirectionJugador1);
@@ -313,26 +314,34 @@ namespace Juego.Clases
             {
                 if (circuloRojoActivo[i] && circuloAzulActivo[i])
                 {
+                    spriteBatch.Begin();
                     spriteBatch.Draw(Totem[0], TotemPos[i], Activo, Color.White);
+                    spriteBatch.End();
                 }
                 else if (circuloRojoActivo[i])
                 {
+                    spriteBatch.Begin();
                     spriteBatch.Draw(Totem[0], TotemPos[i], RojoA, Color.White);
+                    spriteBatch.End();
                 }
                 else if (circuloAzulActivo[i])
                 {
+                    spriteBatch.Begin();
                     spriteBatch.Draw(Totem[0], TotemPos[i], AzulA, Color.White);
+                    spriteBatch.End();
                 }
                 else
                 {
+                    spriteBatch.Begin();
                     spriteBatch.Draw(Totem[0], TotemPos[i], Inactivo, Color.White);
+                    spriteBatch.End();
                 }
             }
-
         }
 
         private void DrawPlayer(SpriteBatch spriteBatch, Vector2 position, Texture2D[] up, Texture2D[] down, Texture2D[] left, Texture2D[] right, int frameactual, Direction currentDirection)
         {
+            spriteBatch.Begin();
             switch (currentDirection)
             {
                 case Direction.Up:
@@ -351,6 +360,7 @@ namespace Juego.Clases
                     spriteBatch.Draw(right[frameactual], position, Color.White);
                     break;
             }
+            spriteBatch.End();
         }
 
         public void Reset()

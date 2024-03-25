@@ -13,20 +13,22 @@ namespace Juego.Clases
     {
         public AsepriteFile ArchivoMap;
         public Tilemap Mapa;
+        public string MapaSeleccionado { get; set; }
+
         public TileMapManager()
         {
-            LoadContent();
+
         }
 
-        public void LoadContent() 
+        public void LoadContent()
         {
-            ArchivoMap = AsepriteFile.Load("C:\\Users\\Alejandro Oviedo\\Desktop\\P.O.O_2023_luis_oviedo\\MonoGame\\Juego\\Juego\\Content\\Mapas\\MapaCarrera\\MapaPista01.aseprite");
+            ArchivoMap = AsepriteFile.Load(MapaSeleccionado);
             Mapa = TilemapProcessor.Process(Variables._graphics, ArchivoMap, 0);
         }
 
         public void Draw()
         {
-            Mapa.Draw(Variables._spritebatch,Vector2.Zero,Color.White);
+            Mapa.Draw(Variables._spritebatch, Vector2.Zero, Color.White);
         }
     }
 }

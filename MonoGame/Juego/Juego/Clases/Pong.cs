@@ -83,7 +83,7 @@ namespace Juego.Clases
         public void Update(GameTime gameTime)
         {
             powerUpTimer += (float)gameTime.ElapsedGameTime.TotalSeconds;
-            if (powerUpTimer >= 10f)
+            if (powerUpTimer >= 7f)
             {
                 int randomType = random.Next(0, powerups.Length);
                 PowerUp newPowerUp = new PowerUp
@@ -308,7 +308,7 @@ namespace Juego.Clases
                     score.Play();
                 }
             }
-            //Pedros
+
             KeyboardState keyboardState = Keyboard.GetState();
             if (keyboardState.IsKeyDown(Keys.W))
             {
@@ -360,28 +360,40 @@ namespace Juego.Clases
         }
         public void Draw(SpriteBatch spriteBatch)
         {
+            spriteBatch.Begin();
             spriteBatch.Draw(fondo, fondopos, Color.White);
             spriteBatch.Draw(paleta1, paleta1pos, Color.White);
             spriteBatch.Draw(paleta2, paleta2pos, Color.White);
+            spriteBatch.End();
             if (Pelotavisible)
             {
+                spriteBatch.Begin();
                 spriteBatch.Draw(pelota, pelotapos, Color.White);
+                spriteBatch.End();
             }
             else
             {
+                spriteBatch.Begin();
                 spriteBatch.Draw(pelota, pelotapos, Color.Transparent);
+                spriteBatch.End();
             }
+            spriteBatch.Begin();
             spriteBatch.DrawString(spriteFont, ptsjugador1Text, new Vector2(240, 15), Color.White);
             spriteBatch.DrawString(spriteFont, ptsjugador2Text, new Vector2(560, 15), Color.White);
+            spriteBatch.End();
 
             foreach (PowerUp powerUp in activePowerUps)
             {
+                spriteBatch.Begin();
                 Rectangle sourceRect = new Rectangle(powerUp.Type * 30, 0, 30, 30);
                 spriteBatch.Draw(powerups[powerUp.Type], powerUp.Position, sourceRect, Color.White);
+                spriteBatch.End();
             }
             if (PelotaDuplicada)
             {
+                spriteBatch.Begin();
                 spriteBatch.Draw(pelota, duplicatePelotaPosition, Color.White);
+                spriteBatch.End();
             }
         }
         public void Reset()
